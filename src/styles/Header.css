@@ -1,0 +1,39 @@
+.nav_wrapper {
+    display: flex;
+    /* justify-content: space-evenly; */
+    text-align: center;
+}
+
+.nav_wrapper .logo {
+    display: flex;
+}
+
+.nav_wrapper .logo img {
+    width: 30px;
+}
+
+.nav_wrapper  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logged,
+.not-logged {
+    margin-top: 25px;
+    display: flex;
+}
+
+.not-logged li {
+    display: flex;
+    padding: 20px;
+}
+
+.logged li {
+    display: flex;
+    padding: 20px;
+}
+
+.nav-wrapper ul li {
+    display: block;
+}
