@@ -2,11 +2,3 @@
 @import url(https://fonts.googleapis.com/css?family=Rancho);
 @import url('./Header.css');
 @import url('./Home.css');
-
-
-* {
-    font-family: Montserrat;
-    box-sizing: border-box;
-}
-
-

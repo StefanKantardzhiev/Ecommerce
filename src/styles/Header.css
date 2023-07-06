@@ -1,7 +1,8 @@
 .nav_wrapper {
-    width: 100%;
+    margin: auto;
+    width: 80%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -40,8 +41,6 @@
 
 .logged,
 .not-logged {
-
-    padding-left: 33%;
     display: flex;
 }
 

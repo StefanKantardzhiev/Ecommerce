@@ -1,0 +1,29 @@
+.hero_section {
+    background-color: rgb(208, 221, 250);
+}
+
+.hero_content {
+    margin-top: 8vh;
+    margin-left: -300px;
+    width: 150%;
+    padding: 100px;
+    text-align: center;
+}
+
+.hero_section h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.buy_btn {
+    background-color: rgb(208, 221, 250);
+    border-radius: 20px;
+    padding: 2px 20px;
+    border: 1px solid grey;
+}
+.buy_btn:hover{
+    background-color: rgb(149, 149, 255);
+    color:white;
+    font-weight: 500;
+    scale: 1.01;
+}
