@@ -1,0 +1,14 @@
+.trending_products .container {
+    min-width: 90%;
+}
+
+.trending_products .container .row .col-lg-10 {
+    margin: auto;
+}
+
+.products_list {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+    gap: 50px;
+}

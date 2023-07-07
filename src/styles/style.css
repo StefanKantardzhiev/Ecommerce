@@ -4,3 +4,5 @@
 @import url('./Home.css');
 @import url('./services.css');
 @import url('/node_modules/remixicon/fonts/remixicon.css');
+@import url('/src/styles/Products-List.css');
+@import url('/src/styles/Product-Card.css');

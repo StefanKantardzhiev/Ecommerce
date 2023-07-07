@@ -11,9 +11,9 @@ const Services = () => {
             <Row>
                 {
                     serviceData.map((item, index) => (
-                        <Col lg='3' md='5'>
-                            <div className="service_item">
-                                <span>'{item.icon}'</span>
+                        <Col key={index}>
+                            <div className="service_item" style={{ background: `${item.bg}` }}>
+                                <span><i className={item.icon} style={{ color: `${item.bg}` }}></i></span>
                                 <div>
                                     <h3>{item.title}</h3>
                                     <p>{item.subtitle}</p>
@@ -24,7 +24,6 @@ const Services = () => {
                 }
             </Row>
         </Container>
-
     </section>
 }
 

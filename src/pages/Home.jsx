@@ -5,6 +5,7 @@ import heroImg from '../assets/images/hero-img.png'
 import '../styles/Home.css'
 import { Link } from "react-router-dom";
 import Services from "../services/Services";
+import ProductsList from "../components/UI/ProductsList";
 
 const Home = () => {
     const year = new Date().getFullYear()
@@ -32,7 +33,17 @@ const Home = () => {
             </Container>
         </section>
         <Services />
-    </Helmet >
+        <section className="trending_products">
+            <Container>
+                <h2 className="section_title">Trending Products</h2>
+                <Row>
+                    <Col lg="10">
+                        <ProductsList />
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    </Helmet>
 
 }
 

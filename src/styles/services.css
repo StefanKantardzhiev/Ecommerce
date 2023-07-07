@@ -1,25 +1,43 @@
 .services .row {
-    /* margin: auto; */
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding-top: 5vh;
 }
 
-.services {}
-
-.services .col-md-4 {
-   
-}
-
 .service_item {
+    color: rgba(2, 2, 112, 0.708);
     display: flex;
-    padding: 20px;
+    padding: 10px;
     background-color: aliceblue;
-    column-gap: 0.5rem;
-    align-items: center;
+    column-gap: 1.3rem;
+    align-items: left;
     border-radius: 5px;
     height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.059);
+    box-shadow: 1px 2px 5px rgba(2, 2, 112, 0.708);
 }
 
+.service_item:hover {
+    scale: 1.1;
+    transition: all .1s ease-in-out;
+
+}
+
+.service_item span {
+    align-self: center;
+
+}
+.service_item div h3{
+    font-weight: 700;
+}
+
+.service_item div p{
+    font-style: italic;
+    font-weight: 500;
+}
 .service_item span i {
     font-size: 2.2rem;
+    padding: 10px;
+    /* color: wheat; */
+    border-radius: 100px;
+    background-color: black;
 }

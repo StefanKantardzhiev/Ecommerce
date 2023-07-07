@@ -1,22 +1,26 @@
-.main{
-}
+.main {}
 
 .hero_section {
     background-color: rgb(208, 221, 250);
 }
-.container{
+
+.container {
     width: 100%;
 }
+
 .hero_content {
     margin-top: 8vh;
     margin-left: -300px;
     width: 150%;
     padding: 100px;
     text-align: center;
+    /* color:rgba(2, 2, 112, 0.454); */
+    font-weight: 500;
+
 }
 
 .hero_section h2 {
-    color: var(--primary-color);
+    color: rgba(2, 2, 112, 0.756);
     font-size: 2.5rem;
 }
 
@@ -26,9 +30,23 @@
     padding: 2px 20px;
     border: 1px solid grey;
 }
-.buy_btn:hover{
+
+.buy_btn:hover {
     background-color: rgb(149, 149, 255);
-    color:white;
+    color: white;
     font-weight: 500;
     scale: 1.01;
+}
+
+
+.container {
+    max-width: 80%;
+}
+
+.section_title {
+    text-align: center;
+    padding: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    color: rgba(2, 2, 112, 0.708);
 }
