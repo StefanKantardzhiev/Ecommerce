@@ -8,10 +8,10 @@
 
 .product_img img {
     /* float: left; */
-    padding:10px;
+    padding: 10px;
     width: 300px;
     height: 300px;
-    object-fit:scale-down;
+    object-fit: scale-down;
 }
 
 .product_item:hover {
@@ -25,13 +25,16 @@
     border-style: dashed;
 }
 
-.product_name {
+.product_name a {
     text-align: left;
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 3px grey;
 }
 
 .product_desc {
     font-weight: 500;
-    padding: 10px;
+    /* padding: 20px; */
 }
 
 .product-card-bottom {
@@ -41,8 +44,11 @@
 
 .product-card-bottom .price {
     float: left;
-    font-size: 30px;
-
+    font-size: 40px;
+    font-weight: 600;
+    color:rgb(237, 197, 123);
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    padding-top: 8px;
 }
 
 .ri-add-circle-fill {

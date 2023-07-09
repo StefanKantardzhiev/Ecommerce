@@ -1,0 +1,65 @@
+.timer_count {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(2, 2, 112, 0.352);
+}
+
+.timer_count img {
+    padding-left: 20rem;
+    height: 500px;
+}
+
+.timer_count h2 {
+    font-size: 80px;
+    padding-top: 50px;
+}
+
+.timer_count h3 {
+    padding: 20px;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.clock {
+    padding-top: 6rem;
+    font-size: 50px;
+    float: right;
+}
+
+.limited_buy_btn {
+    font-size: 30px;
+    text-decoration: none;
+    color: #000;
+    background-color: rgb(208, 221, 250);
+    border-radius: 20px;
+    padding: 2px 50px;
+    border: 1px solid grey;
+}
+
+.limited_buy_btn a {
+    text-decoration: none;
+    color: black;
+}
+
+.limited_buy_btn a:hover {
+    scale: 1.1;
+}
+
+.limited_buy_btn:hover {
+    /* background-color: rgb(149, 149, 255); */
+    color: black;
+    font-weight: 500;
+    scale: 1.1;
+}
+
+.clock-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5;
+    font-size: 32px;
+}
+
+.fs-1{
+    padding:30px;
+
+}
