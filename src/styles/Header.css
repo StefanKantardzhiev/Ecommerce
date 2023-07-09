@@ -42,6 +42,8 @@
 .logged,
 .not-logged {
     display: flex;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
 .not-logged li {
