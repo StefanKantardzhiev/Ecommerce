@@ -17,18 +17,18 @@ const Home = () => {
                     <Col lg="6" md="6">
                         <div className="hero_content">
                             <p className="hero_subtitle">Trending in {year}</p>
-                            <h2>Make your PC great and play unlimited!</h2>
+                            <h2>PcBuildz© X WoodWorks©</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, voluptatibus exercitationem libero,
                                 eligendi unde dolore a accusantium deleniti qui voluptas eveniet
                                 quia assumenda cupiditate neque ducimus repudiandae laborum eos totam.</p>
                             <Link to={'shop'}> <button className="buy_btn">Shop Now !</button></Link>
                         </div>
                     </Col>
-                    <Col lg='6' md='6'>
+                    {/* <Col lg='6' md='6'>
                         <div className="hero_img">
                             <img src={heroImg} alt='hero' width={700} />
                         </div>
-                    </Col>
+                    </Col> */}
                 </Row>
             </Container>
         </section>

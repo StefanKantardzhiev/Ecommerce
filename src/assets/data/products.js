@@ -1,40 +1,39 @@
-import productImg01 from "../images/double-sofa-01.png";
-import productImg02 from "../images/double-sofa-02.png";
-import productImg03 from "../images/double-sofa-03.png";
+import productImg01 from "../images/laptop.png";
+import productImg02 from "../images/laptop2.png";
+import productImg03 from "../images/laptop3.png";
+import productImg04 from "../images/laptop4.jpg";
 
-import productImg04 from "../images/single-sofa-01.jpg";
-import productImg05 from "../images/single-sofa-02.jpg";
-import productImg06 from "../images/single-sofa-03.jpg";
-import productImg007 from "../images/single-sofa-04.png";
+import productImg05 from "../images/office.jpg";
+import productImg06 from "../images/officepc2.jpg";
+import productImg07 from "../images/officepc3.jpg";
 
-import productImg07 from "../images/arm-chair-01.jpg";
-import productImg08 from "../images/arm-chair-02.jpg";
-import productImg09 from "../images/arm-chair-03.jpg";
-import productImg10 from "../images/arm-chair-01.jpg";
+import productImg08 from "../images/tablet.png";
+import productImg09 from "../images/tablet2.png";
+import productImg10 from "../images/tablet4.png";
+import productImg11 from "../images/tablet3.png";
 
-import productImg13 from "../images/phone-01.jpg";
-import productImg14 from "../images/phone-02.jpg";
-import productImg15 from "../images/phone-03.png";
-import productImg16 from "../images/phone-04.jpg";
-import productImg17 from "../images/phone-05.jpg";
-import productImg18 from "../images/phone-06.jpg";
+import productImg12 from "../images/phone-01.jpg";
+import productImg13 from "../images/phone-02.jpg";
+import productImg14 from "../images/phone-03.png";
+import productImg15 from "../images/phone-04.jpg";
+import productImg16 from "../images/phone-05.jpg";
+import productImg17 from "../images/phone-06.jpg";
 
-import productImg19 from "../images/watch-01.jpg";
-import productImg20 from "../images/watch-02.jpg";
-import productImg21 from "../images/watch-03.jpg";
-import productImg22 from "../images/watch-04.jpg";
+import productImg18 from "../images/watch-01.jpg";
+import productImg19 from "../images/watch-02.jpg";
+import productImg20 from "../images/watch-03.jpg";
+import productImg21 from "../images/watch-04.jpg";
 
-import productImg23 from "../images/wireless-01.png";
-
-import productImg25 from "../images/wireless-03.png";
+import productImg22 from "../images/wireless-01.png";
+import productImg23 from "../images/wireless-03.png";
 
 const products = [
   {
     id: "01",
-    productName: "Stone and Beam Westview ",
+    productName: "Rog Strix Gaming Laptop",
     imgUrl: productImg01,
-    category: "sofa",
-    price: 193,
+    category: "laptop",
+    price: 1300,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -50,10 +49,10 @@ const products = [
 
   {
     id: "02",
-    productName: "Rivet Bigelow Modern ",
+    productName: "Microsoft Surface",
     imgUrl: productImg02,
-    category: "sofa",
-    price: 253,
+    category: "laptop",
+    price: 453,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -73,10 +72,10 @@ const products = [
 
   {
     id: "03",
-    productName: "Amazon Brand Modern Sofa",
+    productName: "MacBook Air",
     imgUrl: productImg03,
-    category: "sofa",
-    price: 173,
+    category: "laptop",
+    price: 1200,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -93,34 +92,13 @@ const products = [
     ],
     avgRating: 4.7,
   },
-  {
-    id: "26",
-    productName: "Rivet Bigelow Modern ",
-    imgUrl: productImg02,
-    category: "sofa",
-    price: 253,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.7,
-  },
+
   {
     id: "04",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Lenovo Laptop",
     imgUrl: productImg04,
-    category: "sofa",
-    price: 163,
+    category: "laptop",
+    price: 800,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -140,10 +118,10 @@ const products = [
 
   {
     id: "05",
-    productName: "Faux Velvet Sofa",
+    productName: "Office Delight Core i7 RAM 16GB RTX 3060Ti",
     imgUrl: productImg05,
-    category: "sofa",
-    price: 163,
+    category: "office",
+    price: 500,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -163,32 +141,10 @@ const products = [
 
   {
     id: "06",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Hewlett-Packard v5",
     imgUrl: productImg06,
-    category: "sofa",
-    price: 163,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.6,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.7,
-  },
-  {
-    id: "07",
-    productName: "Sakarias Armchair",
-    imgUrl: productImg07,
-    category: "chair",
-    price: 99,
+    category: "office",
+    price: 650,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -207,11 +163,11 @@ const products = [
   },
 
   {
-    id: "27",
-    productName: "Modern Arm Sofa",
-    imgUrl: productImg007,
-    category: "sofa",
-    price: 173,
+    id: "07",
+    productName: "Budget Office PC Ryzen 3 GTX 1660",
+    imgUrl: productImg07,
+    category: "office",
+    price: 350,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -231,10 +187,10 @@ const products = [
 
   {
     id: "08",
-    productName: "Baltsar Chair",
+    productName: "iPad PRO 256GB",
     imgUrl: productImg08,
-    category: "chair",
-    price: 89,
+    category: "tablet",
+    price: 2500,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -254,9 +210,9 @@ const products = [
 
   {
     id: "09",
-    productName: "Helmar Chair",
+    productName: "Samsung Tab A8 LTE",
     imgUrl: productImg09,
-    category: "chair",
+    category: "tablet",
     price: 112,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -277,10 +233,10 @@ const products = [
 
   {
     id: "10",
-    productName: "Apple iPhone 12 Pro",
-    imgUrl: productImg13,
-    category: "mobile",
-    price: 799,
+    productName: "Samsung Tab S8",
+    imgUrl: productImg11,
+    category: "tablet",
+    price: 500,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -297,11 +253,12 @@ const products = [
     ],
     avgRating: 4.8,
   },
+
   {
-    id: "25",
-    productName: "Sakarias Armchair",
+    id: "11",
+    productName: "Huawei Tab 128GB",
     imgUrl: productImg10,
-    category: "chair",
+    category: "tablet",
     price: 99,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -319,9 +276,10 @@ const products = [
     ],
     avgRating: 4.7,
   },
+
   {
-    id: "11",
-    productName: "Apple iPhone 12 Max",
+    id: "12",
+    productName: "Apple iPhone 11 Pro",
     imgUrl: productImg14,
     category: "mobile",
     price: 799,
@@ -343,8 +301,8 @@ const products = [
   },
 
   {
-    id: "12",
-    productName: "Realme 8",
+    id: "13",
+    productName: "iPhone 12 PRO",
     imgUrl: productImg15,
     category: "mobile",
     price: 599,
@@ -366,34 +324,11 @@ const products = [
   },
 
   {
-    id: "13",
-    productName: "One Plus Nord",
+    id: "14",
+    productName: "iPhone 11",
     imgUrl: productImg16,
     category: "mobile",
-    price: 799,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.8,
-  },
-
-  {
-    id: "14",
-    productName: "Apple iPhone 13 Pro",
-    imgUrl: productImg17,
-    category: "mobile",
-    price: 899,
+    price: 499,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -413,8 +348,8 @@ const products = [
 
   {
     id: "15",
-    productName: "Samsung Galaxy S22",
-    imgUrl: productImg18,
+    productName: "Apple iPhone 13",
+    imgUrl: productImg17,
     category: "mobile",
     price: 699,
     shortDesc:
@@ -436,10 +371,33 @@ const products = [
 
   {
     id: "16",
-    productName: "Rolex Watch",
-    imgUrl: productImg19,
+    productName: "Gold Xperia SmartWatch",
+    imgUrl: productImg18,
     category: "watch",
     price: 299,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+
+  {
+    id: "16",
+    productName: "Handmade Rolex Watch",
+    imgUrl: productImg19,
+    category: "watch",
+    price: 1299,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -482,10 +440,10 @@ const products = [
 
   {
     id: "18",
-    productName: "Rolex Watch",
+    productName: "Basic Smartwatch",
     imgUrl: productImg21,
     category: "watch",
-    price: 299,
+    price: 22,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -505,10 +463,10 @@ const products = [
 
   {
     id: "19",
-    productName: "Apple Watch",
+    productName: "Wireless Headphones BeatBox",
     imgUrl: productImg22,
     category: "watch",
-    price: 399,
+    price: 122,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -530,29 +488,6 @@ const products = [
     id: "20",
     productName: "Beat Studio Wireless",
     imgUrl: productImg23,
-    category: "wireless",
-    price: 199,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.8,
-  },
-
-  {
-    id: "22",
-    productName: "Beat EP Headphones",
-    imgUrl: productImg25,
     category: "wireless",
     price: 199,
     shortDesc:

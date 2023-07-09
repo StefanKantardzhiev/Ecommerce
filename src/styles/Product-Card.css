@@ -4,15 +4,21 @@
 
 .product_img {
     text-align: center;
-    
-    
 }
-.product_item:hover{
+
+.product_img img {
+    /* float: left; */
+    width: 300px;
+    height: 300px;
+    object-fit:scale-down;
+}
+
+.product_item:hover {
     scale: 1.05;
     transition: all .2s ease-in-out;
 }
+
 .product_item {
-   
     padding: 20px 20px 0px 20px;
     border-radius: 30px;
     border-style: dashed;

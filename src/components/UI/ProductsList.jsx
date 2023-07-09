@@ -6,11 +6,6 @@ const ProductsList = () => {
 
         <div className="products_list">
             <ProductsCard />
-            <ProductsCard />
-            <ProductsCard />
-            <ProductsCard />
-            <ProductsCard />
-            <ProductsCard />
         </div>
         
     )
