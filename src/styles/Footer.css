@@ -1,0 +1,28 @@
+.list-group-item a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.footer .container .row{
+    margin:auto;
+    display: flex;
+    
+}
+.list-group-item{
+    border: none;
+    background-color: rgba(2, 2, 112, 0);
+}
+
+.footer-quick-links{
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer{
+    border-top: 2px solid rgba(0, 0, 0, 0.228);
+    margin-top: 50px;
+    padding: 20px;
+    bottom: 0;
+    background-color: rgba(2, 2, 112, 0.352);
+}

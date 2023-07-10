@@ -5,7 +5,7 @@
 }
 
 .timer_count img {
-    padding-left: 20rem;
+    padding-left: 10rem;
     height: 500px;
 }
 
@@ -21,7 +21,6 @@
 }
 
 .clock {
-    padding-top: 6rem;
     font-size: 50px;
     float: right;
 }
@@ -62,4 +61,15 @@
 .fs-1{
     padding:30px;
 
+}
+
+.col-md-6 .limitedPriceOld {
+    text-decoration: line-through;
+    font-size: 50px;
+}
+
+.limitedPriceNew {
+    font-size: 60px;
+    color: red;
+    text-shadow: 2px 2px 3px black;
 }

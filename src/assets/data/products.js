@@ -465,7 +465,7 @@ const products = [
     id: "19",
     productName: "Wireless Headphones BeatBox",
     imgUrl: productImg22,
-    category: "watch",
+    category: "wireless",
     price: 122,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",

@@ -12,7 +12,7 @@ const ProductsCard = ({ item, index }) => {
             <h3 className="product_name"><Link to={`/shop/${item.id}`}>{item.productName}</Link></h3>
             <span className="product_desc">{item.shortDesc}</span>
             <div className="product-card-bottom">
-                <span className="price">{item.price} EUR</span>
+                <span className="price">{Number(item.price).toFixed(2)} €</span>
                 <span className='add-icon'><i className="ri-add-circle-fill"></i>
                 </span>
             </div>

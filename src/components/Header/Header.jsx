@@ -36,7 +36,7 @@ const Header = () => {
                 <div className='logo'>
                     <img src={logo} alt='logo' />
                     <div className='logo-text'>
-                        <Link to={'/'}><h3>PCBuildz.de</h3>
+                        <Link to={'/'}><h3>PCBuildz.de&copy;</h3>
                         <p>From enthusiasts for enthusiasts!</p></Link>
                     </div>
                 </div>
