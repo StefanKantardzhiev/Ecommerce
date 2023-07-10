@@ -67,20 +67,20 @@ const Footer = () => {
               <h4 className='quick-links-title'>Contact</h4>
               <ListGroup>
                 <ListGroupItem>
-                  <Link to='/'>
+                  <Link to='https://www.google.de/maps/place/Freseniusstra%C3%9Fe+20,+45145+Essen/@51.4497013,6.9834605,17z/data=!3m1!4b1!4m5!3m4!1s0x47b8c2ebe55fe795:0xee126138d15b0b2d!8m2!3d51.449698!4d6.9860354?entry=ttu'>
                     <span><i className="ri-map-pin-line"></i></span>
                     <p>Essen, Germany 45145</p>
                   </Link>
                 </ListGroupItem>
                 <ListGroupItem>
-                  <Link to='/'>
+                  <Link to='tel:+4911515151511'>
                     <span><i className="ri-phone-line"></i></span>
                     <p> +4911515151511</p>
                   </Link>
                 </ListGroupItem>
                 <ListGroupItem>
-                  <Link to='/'> <span><i className="ri-mail-line"></i></span>
-                    <p> pcbuildz@outlook.de</p>
+                  <Link to='mailto:pcbuildz@outlook.de'> <span><i className="ri-mail-line"></i></span>
+                    <p > pcbuildz@outlook.de</p>
                   </Link>
                 </ListGroupItem>
 
