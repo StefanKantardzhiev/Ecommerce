@@ -9,7 +9,7 @@ import ProductsList from "../components/UI/ProductsList";
 import products from "../assets/data/products";
 import Clock from "../components/UI/Clock";
 // import counterImg from '../assets/images/intel-pc.png'
-
+import huaweiImg from '../assets/images/Huawei-Logo.jpeg'
 
 const Home = () => {
     const [trending, setTrending] = useState(products)
@@ -18,7 +18,7 @@ const Home = () => {
     const [index, setIndex] = useState(0)
     const [newArrivals, setNewArrivals] = useState(products)
 
-    
+
 
     // const [trendingProducts, setTrendingProducts] = useState([])
     const year = new Date().getFullYear()
@@ -38,7 +38,7 @@ const Home = () => {
         const watches = products.filter(item => item.category === 'watch')
         const premium = products.filter(item => item.price > 1800).sort()
         const trending = products.filter(item => Number(item.avgRating) > 4.2).slice(0, 6)
-        
+
         setTrending(trending)
         setPremium(premium.slice(0, 3))
         setNewArrivals(watches)
@@ -102,7 +102,8 @@ const Home = () => {
                         <button className="limited_buy_btn"><Link to='/shop'>Visit Store</Link></button>
                     </Col>
                     <Col lg="6" md='6'>
-                        <img src={limited.imgUrl} alt="" srcSet="" width={800} />
+                        <img src={limited.imgUrl} alt="" srcSet="" />
+                        <img className='huaweiImg' src={huaweiImg} alt=''/>
                     </Col>
                     {/* <ProductsList data={trending} key={index} /> */}
 

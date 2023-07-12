@@ -1,12 +1,15 @@
 .timer_count {
+    width: 90%;
+    margin: auto;
     margin-top: 50px;
     padding: 20px;
     background-color: rgba(2, 2, 112, 0.352);
+    border-radius: 2rem;
 }
 
 .timer_count img {
-    padding-left: 10rem;
-    height: 500px;
+    padding-left: 8rem;
+    height: 38rem;
 }
 
 .timer_count h2 {
@@ -58,9 +61,21 @@
     font-size: 32px;
 }
 
-.fs-1{
-    padding:30px;
+.fs-1 {
+    padding: 30px;
 
+}
+
+.col-md-6:last-child {
+    display: flex;
+    justify-items: center;
+}
+
+.col-md-6:last-child .huaweiImg {
+    width: 6rem;
+    height: 6rem;
+    margin-top: 25rem;
+    padding:0px;
 }
 
 .col-md-6 .limitedPriceOld {
