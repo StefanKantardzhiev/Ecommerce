@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Container, Row } from 'reactstrap'
-import logo from '../../assets/images/eco-logo.png'
+import logo from '../../assets/images/PcBuildzLogo.png'
 import { Link, NavLink } from 'react-router-dom'
 const navLinks = [
     {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, ListGroupItem, ListGroup } from 'reactstrap'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/images/eco-logo.png'
+import logo from '../../assets/images/PcBuildzLogo.png'
 
 const Footer = () => {
   const date = new Date()
