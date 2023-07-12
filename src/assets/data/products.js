@@ -12,8 +12,8 @@ import productImg09 from "../images/tablet2.png";
 import productImg10 from "../images/tablet4.png";
 import productImg11 from "../images/tablet3.png";
 
-import productImg12 from "../images/phone-01.jpg";
-import productImg13 from "../images/phone-02.jpg";
+// import productImg12 from "../images/phone-01.jpg";
+// import productImg13 from "../images/phone-02.jpg";
 import productImg14 from "../images/phone-03.png";
 import productImg15 from "../images/phone-04.jpg";
 import productImg16 from "../images/phone-05.jpg";
@@ -26,6 +26,12 @@ import productImg21 from "../images/watch-04.jpg";
 
 import productImg22 from "../images/wireless-01.png";
 import productImg23 from "../images/wireless-03.png";
+
+import productImg24 from "../images/pc1.jpg";
+import productImg25 from "../images/pc2.jpg";
+import productImg26 from "../images/pc3.jpg";
+import productImg27 from "../images/pc4.jpg";
+
 
 const products = [
   {
@@ -190,7 +196,7 @@ const products = [
     productName: "iPad PRO 256GB",
     imgUrl: productImg08,
     category: "tablet",
-    price: 2500,
+    price: 999,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -370,7 +376,7 @@ const products = [
   },
 
   {
-    id: "16",
+    id: "15",
     productName: "Gold Xperia SmartWatch",
     imgUrl: productImg18,
     category: "watch",
@@ -490,6 +496,94 @@ const products = [
     imgUrl: productImg23,
     category: "wireless",
     price: 199,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+  {
+    id: "21",
+    productName: "Intel Core i7 12 Gen RTX 3070Ti",
+    imgUrl: productImg24,
+    category: "gaming",
+    price: 1999,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+  {
+    id: "22",
+    productName: "Intel Core i5 13 Gen RTX 3080",
+    imgUrl: productImg25,
+    category: "gaming",
+    price: 2199,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+  {
+    id: "23",
+    productName: "Ryzen 5 3600 RX 6700 XT",
+    imgUrl: productImg26,
+    category: "gaming",
+    price: 1200,
+    shortDesc:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+    reviews: [
+      {
+        rating: 4.8,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+      {
+        rating: 4.9,
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      },
+    ],
+    avgRating: 4.8,
+  },
+  {
+    id: "24",
+    productName: "Ryzen 5 5600X RTX 3090Ti",
+    imgUrl: productImg27,
+    category: "gaming",
+    price: 2500,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:

@@ -17,6 +17,9 @@ const Home = () => {
     const [limited, setLimited] = useState([])
     const [index, setIndex] = useState(0)
     const [newArrivals, setNewArrivals] = useState(products)
+
+    
+
     // const [trendingProducts, setTrendingProducts] = useState([])
     const year = new Date().getFullYear()
 
@@ -33,14 +36,14 @@ const Home = () => {
         let randomized = 10;
         const limitedItem = products[randomized]
         const watches = products.filter(item => item.category === 'watch')
-        const premium = products.filter(item => item.price > 500).sort()
-        const trending = products.filter(item => Number(item.avgRating) > 4.7).slice(0, 6)
-
+        const premium = products.filter(item => item.price > 1800).sort()
+        const trending = products.filter(item => Number(item.avgRating) > 4.2).slice(0, 6)
+        
         setTrending(trending)
         setPremium(premium.slice(0, 3))
         setNewArrivals(watches)
         setLimited(limitedItem)
-    }, [])
+    }, [products])
 
 
     return <Helmet title={'Home'}>
@@ -99,7 +102,7 @@ const Home = () => {
                         <button className="limited_buy_btn"><Link to='/shop'>Visit Store</Link></button>
                     </Col>
                     <Col lg="6" md='6'>
-                        <img src={limited.imgUrl} alt="" srcset="" width={800} />
+                        <img src={limited.imgUrl} alt="" srcSet="" width={800} />
                     </Col>
                     {/* <ProductsList data={trending} key={index} /> */}
 

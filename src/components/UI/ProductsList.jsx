@@ -5,10 +5,10 @@ import ProductsCard from './ProductsCard'
 const ProductsList = ({ data, index }) => {
     return (
 
-        <div className="products_list">
+        <div className="products_list" key={index} >
             {
                 data.map(item => (
-                    <ProductsCard item={item} />
+                    <ProductsCard item={item} key={index} />
                 ))}
         </div>
 

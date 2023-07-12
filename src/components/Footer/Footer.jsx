@@ -1,12 +1,16 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import { Container, Row, Col, ListGroupItem, ListGroup } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/PcBuildzLogo.png'
+import ProductsList from '../UI/ProductsList'
+import products from '../../assets/data/products'
+
 
 const Footer = () => {
   const date = new Date()
-
   return (
+
 
     <footer className='footer'>
       <Container>
@@ -28,16 +32,22 @@ const Footer = () => {
               <h4 className='quick-links-title'>Top Categories</h4>
               <ListGroup>
                 <ListGroupItem>
-                  <Link to='/'>Mobile Phones</Link>
+                  <Link to='/phones'>Phones</Link>
                 </ListGroupItem>
                 <ListGroupItem>
-                  <Link to='/'>Laptops</Link>
+                  <Link to='/laptops'>Laptops</Link>
                 </ListGroupItem>
                 <ListGroupItem>
-                  <Link to='/'>Watches</Link>
+                  <Link to='/watches'>Watches</Link>
                 </ListGroupItem>
                 <ListGroupItem>
-                  <Link to='/'>Office PCs</Link>
+                  <Link to='/office'>Office Buildz</Link>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <Link to='/gaming'>Gaming Buildz</Link>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <Link to='/wireless'>Wireless Products</Link>
                 </ListGroupItem>
 
               </ListGroup>
