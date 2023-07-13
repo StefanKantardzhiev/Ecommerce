@@ -17,7 +17,6 @@ const Shop = () => {
         setProductsData(searchedProducts)
     }
 
-
     const handleFilter = e => {
         const filterValue = e.target.value
         if (filterValue === 'gaming') {
@@ -43,6 +42,9 @@ const Shop = () => {
         if (filterValue === 'wireless') {
             const filteredProducts = products.filter(item => item.category === 'wireless');
             setProductsData(filteredProducts)
+        }
+        if (filterValue === 'Filter by Category') {
+            setProductsData(products)
         }
     }
 
