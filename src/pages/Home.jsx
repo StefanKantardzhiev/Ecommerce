@@ -11,7 +11,7 @@ import Clock from "../components/UI/Clock";
 // import counterImg from '../assets/images/intel-pc.png'
 import huaweiImg from '../assets/images/Huawei-Logo.jpeg'
 
-const Home = () => {
+const Home = (num) => {
     const [trending, setTrending] = useState(products)
     const [premium, setPremium] = useState(products)
     const [limited, setLimited] = useState([])
@@ -47,11 +47,11 @@ const Home = () => {
 
 
     return <Helmet title={'Home'}>
-        <section className="hero_section">
+        <section className="hero_section" key={num} >
             <Container>
                 <Row>
                     <Col lg="6" md="6">
-                        <div className="hero_content">
+                        <div className="hero_content" key={num} >
                             <p className="hero_subtitle">Trending in {year}</p>
                             <h2>PcBuildz&copy; X WoodWorks&copy;</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, voluptatibus exercitationem libero,
@@ -103,7 +103,7 @@ const Home = () => {
                     </Col>
                     <Col lg="6" md='6'>
                         <img src={limited.imgUrl} alt="" srcSet="" />
-                        <img className='huaweiImg' src={huaweiImg} alt=''/>
+                        <img className='huaweiImg' src={huaweiImg} alt='' />
                     </Col>
                     {/* <ProductsList data={trending} key={index} /> */}
 

@@ -1,0 +1,16 @@
+.common_section {
+    background: url('../assets/images/backtround-image.jpg') no-repeat;
+    background-size: cover;
+    height: 15rem;
+    width: 80%;
+    margin: auto;
+    border-radius: 2rem;
+}
+
+.common_section h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    text-align: left;
+    padding: 7rem 0rem 0rem 8rem;
+}
