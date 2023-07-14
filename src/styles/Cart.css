@@ -1,0 +1,12 @@
+.shopping-cart {
+    padding-top: 20px;
+}
+
+.table{
+    width: 80%;
+    margin:auto;
+}
+
+.table-item{
+    border: 1px solid black;
+}

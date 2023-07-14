@@ -5,7 +5,7 @@ import React from "react";
 import Home from '../pages/Home'
 import Cart from '../pages/Cart'
 import Checkout from '../pages/Checkout'
-import ProductDetails from '../pages/ProductDetails'
+import ProductDetails from '../components/UI/ProductDetails'
 import Shop from '../pages/Shop'
 import Signup from '../pages/Signup'
 import Login from '../pages/Login'
