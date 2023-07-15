@@ -17,7 +17,7 @@ const Footer = () => {
         <Row>
           <Col lg="5">
             <div className='logo'>
-              <img src={logo} alt='logo' />
+              {/* <img src={logo} height={120} alt='logo' /> */}
               <div className='logo-text'>
                 <Link to={'/'}><h3>PCBuildz.de</h3>
                   <p>From enthusiasts for enthusiasts!</p></Link>
