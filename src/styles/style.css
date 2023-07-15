@@ -11,6 +11,7 @@
 @import url('/src/styles/common-section.css');
 @import url('/src/styles/Shop.css');
 @import url('/src/styles/Product-Details.css');
+@import url('/src/styles/Cart.css');
 
 *{
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.452);

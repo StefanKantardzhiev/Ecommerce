@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 // import { Container, Row } from 'reactstrap'
 import logo from '../../assets/images/PcBuildzLogo.png'
 import { Link, NavLink } from 'react-router-dom'
+
+import { useSelector } from "react-redux"
+import cartSlice from '../../redux/slices/cartSlice'
+
+
 const navLinks = [
     {
         path: '/',
@@ -11,10 +16,6 @@ const navLinks = [
         path: 'shop',
         display: 'Shop'
     },
-    {
-        path: 'cart',
-        display: 'Cart'
-    }
 ]
 
 const navLinksNewUser = [
@@ -28,7 +29,22 @@ const navLinksNewUser = [
     },
 ]
 
+const navLinksLoggedUser = [
+    {
+        path: 'profile',
+        display: 'Profile'
+    },
+    {
+        path: 'cart',
+        display: 'Cart'
+    }
+]
+
 const Header = () => {
+    const isLoggedIn = true;
+
+    const headerRef = useRef(null)
+    const totalQuantity = useSelector(state => state.cart.totalQuantity)
 
     return (
         <header className='header'>
@@ -37,26 +53,39 @@ const Header = () => {
                     <img src={logo} alt='logo' />
                     <div className='logo-text'>
                         <Link to={'/'}><h3>PCBuildz.de&copy;</h3>
-                        <p>From enthusiasts for enthusiasts!</p></Link>
+                            <p>From enthusiasts for enthusiasts!</p></Link>
                     </div>
                 </div>
-                {/* if user */}
-                <div className='logged'>
 
-                    {navLinks.map((item, index) => (
+                {!isLoggedIn ?
+                    <div className="not-logged">
+                        {navLinksNewUser.map((item, index) => (
+                            <li className='nav_item' key={index}>
+                                <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
+                                
+                            </li>
+                        ))}
+                    </div> :
+                    <div className="logged">
+                        {navLinksLoggedUser.map((item, index) => (
+                            <li className='nav_item' key={index}>
+                                <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
+                            </li>
+                        ))
+                        }
+                       <span className='totalQty'>{totalQuantity}</span>
+                    </div>
+                    
+                }
+
+
+                {/* <div className="logged">
+                    {navLinksLoggedUser.map((item, index) => (
                         <li className='nav_item' key={index}>
                             <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
                         </li>
                     ))}
-                </div>
-                <div className="not-logged">
-                    {/* if not user */}
-                    {navLinksNewUser.map((item, index) => (
-                        <li className='nav_item' key={index}>
-                            <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
-                        </li>
-                    ))}
-                </div>
+                </div> */}
 
             </div>
         </header>
