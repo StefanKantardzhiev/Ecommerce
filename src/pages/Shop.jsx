@@ -65,7 +65,7 @@ const Shop = () => {
                 </select>
             </div>
             <div className="search_box">
-                <span><i class="ri-search-line"></i></span>
+                <span><i className="ri-search-line"></i></span>
                 <input type="text" placeholder="Search..." onChange={handleSearch} />
 
             </div>

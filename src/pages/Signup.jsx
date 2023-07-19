@@ -1,6 +1,98 @@
 import React from "react";
+import Helmet from "../components/Helmet/Helmet";
+import CommonSection from "../components/UI/CommonSection";
 
-const Signup = () => {
-    return <div>Signup</div>
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { setDoc, doc } from "firebase/firestore";
+
+import { auth } from "../firebase.config";
+import { storage } from '../firebase.config'
+import { toast } from "react-toastify";
+import { db } from '../firebase.config'
+import { useNavigate } from "react-router-dom";
+
+const SignUp = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [rePass, setRepass] = useState('')
+    const [loading, setLoading] = useState(false)
+
+
+    const [file, setFile] = useState(null)
+    const navigate = useNavigate()
+
+    const [username, setUsername] = useState('')
+
+    const signup = async (e) => {
+        e.preventDefault()
+        setLoading(true)
+        try {
+            const userCredentials = await createUserWithEmailAndPassword(auth, email, password)
+
+
+            const user = userCredentials.user
+            const storageRef = ref(storage, `images/${Date.now() + username}`)
+
+            const uploadTask = uploadBytesResumable(storageRef, file)
+
+
+            uploadTask.on((error) => {
+                toast.error(error.message)
+            },
+                () => {
+                    getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+                        //update user profile
+                        await updateProfile(user, {
+                            displayName: username,
+                            photoURL: downloadURL,
+                        })
+                        //store user data in firebase
+                        await setDoc(doc(db, 'users', user.uid), {
+                            uid: user.uid,
+                            displayName: username,
+                            email,
+                            photoURL: downloadURL,
+                        })
+                    })
+                })
+            setLoading(false)
+            toast.success('Successfully Registered')
+            navigate('/login')
+        } catch (error) {
+            setLoading(false)
+            toast.error('Something went wrong !')
+        }
+
+    }
+
+    return (
+        <Helmet title="Register">
+            <CommonSection title="Register" />
+            <section className="register">
+                <div className="register-container">
+                    {loading ?
+                        (<div className="loading-text">
+                            <span>Loading...</span>
+                        </div>) : (<>
+                            <h3 className="register-title">Register</h3>
+                            <form className="register-form" onSubmit={signup}>
+                                <input type="text" placeholder="Enter your username" value={username} onChange={e => setUsername(e.target.value)}></input>
+                                <input type="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)}></input>
+                                <input type="password" placeholder="Enter your password" value={password} onChange={e => setPassword(e.target.value)}></input>
+                                <input type="re-password" placeholder="Repeat password" value={rePass} onChange={e => setRepass(e.target.value)}></input>
+                                <input type="file" onChange={(e) => setFile(e.target.files[0])}></input>
+                                <button type="submit" className="buy_btn">Register</button>
+                            </form>
+                            <p>Already have an account?<br />Login <Link to={'/login'}>here</Link>!</p>
+                        </>)}
+                </div>
+            </section>
+        </Helmet>
+    )
 }
-export default Signup;
+
+export default SignUp

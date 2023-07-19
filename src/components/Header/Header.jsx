@@ -1,22 +1,19 @@
-import React, { useRef } from 'react'
-// import { Container, Row } from 'reactstrap'
+import React from 'react'
 import logo from '../../assets/images/PcBuildzLogo.png'
 import { Link, NavLink } from 'react-router-dom'
-
 import { useSelector } from "react-redux"
-import cartSlice from '../../redux/slices/cartSlice'
 
 
-const navLinks = [
-    {
-        path: '/',
-        display: 'Home'
-    },
-    {
-        path: 'shop',
-        display: 'Shop'
-    },
-]
+// const navLinks = [
+//     {
+//         path: '/',
+//         display: 'Home'
+//     },
+//     {
+//         path: 'shop',
+//         display: 'Shop'
+//     },
+// ]
 
 const navLinksNewUser = [
     {
@@ -43,7 +40,7 @@ const navLinksLoggedUser = [
 const Header = () => {
     const isLoggedIn = true;
 
-    const headerRef = useRef(null)
+    // const headerRef = useRef(null)
     const totalQuantity = useSelector(state => state.cart.totalQuantity)
 
     return (
@@ -52,17 +49,17 @@ const Header = () => {
                 <div className='logo'>
                     <img src={logo} alt='logo' />
                     <div className='logo-text'>
-                        <Link to={'/'}><h3>PCBuildz.de&copy;</h3>
-                            <p>From enthusiasts for enthusiasts!</p></Link>
+                        <span> <Link to={'/'}><h3>PCBuildz.de&copy;</h3>
+                            From enthusiasts for enthusiasts!</Link></span>
                     </div>
                 </div>
 
-                {!isLoggedIn ?
-                    <div className="not-logged">
+                {isLoggedIn ?
+                    <div className="logged">
                         {navLinksNewUser.map((item, index) => (
                             <li className='nav_item' key={index}>
                                 <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
-                                
+
                             </li>
                         ))}
                     </div> :
@@ -73,9 +70,9 @@ const Header = () => {
                             </li>
                         ))
                         }
-                       <span className='totalQty'>{totalQuantity}</span>
+                        <span className='totalQty'>{totalQuantity}</span>
                     </div>
-                    
+
                 }
 
 

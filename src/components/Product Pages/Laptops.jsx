@@ -15,7 +15,7 @@ const Laptops = (item, index) => {
 
 
     return (
-        <ProductsList data={laptops} key={index} />
+        <ProductsList data={laptops} key={index+12} />
     )
 }
 

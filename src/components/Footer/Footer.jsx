@@ -20,7 +20,7 @@ const Footer = () => {
               {/* <img src={logo} height={120} alt='logo' /> */}
               <div className='logo-text'>
                 <Link to={'/'}><h3>PCBuildz.de</h3>
-                  <p>From enthusiasts for enthusiasts!</p></Link>
+                  <span>From enthusiasts for enthusiasts!</span></Link>
               </div>
             </div>
             <p className="footer-text mt-4">
@@ -85,7 +85,7 @@ const Footer = () => {
                 <ListGroupItem>
                   <Link to='tel:+4911515151511'>
                     <span><i className="ri-phone-line"></i></span>
-                    <p> +4911515151511</p>
+                    <span> +4911515151511</span>
                   </Link>
                 </ListGroupItem>
                 <ListGroupItem>
@@ -98,7 +98,7 @@ const Footer = () => {
             </div>
           </Col>
           <Col lg="12">
-            <p className='footer_copyright'>Copyright {date.getFullYear()}&copy; developed and designed by Stefan Kantardzhiev.<p>All rights reserved.</p></p>
+            <span className='footer_copyright'>Copyright {date.getFullYear()}&copy; developed and designed by Stefan Kantardzhiev.<span>All rights reserved.</span></span>
           </Col>
         </Row>
 

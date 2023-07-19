@@ -2,11 +2,8 @@ import React from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Container, Col, Row } from "reactstrap";
-import tdImg from '../assets/images/hero-img.png'
 import { cartActions } from '../redux/slices/cartSlice'
 import { useSelector, useDispatch } from "react-redux";
-import { ToastContainer, toast } from 'react-toastify';
-
 import { Link } from "react-router-dom";
 
 const Cart = () => {
@@ -46,7 +43,7 @@ const Cart = () => {
                     </Col>
                     <div className="total">
                         <div className="total-text">
-                            <h6>Total Amount:</h6>
+                            <h6>TOTAL:</h6>
                             <span>{totalAmount} €</span>
                         </div>
                         <p>taxes and shipping wil be added on checkout</p>
@@ -73,7 +70,7 @@ const Tr = ({ item }) => {
     }
     return (
         <tr>
-            <td><img src={item.image}></img></td>
+            <td><img src={item.image} alt="item-img"></img></td>
             <td>{item.productName}</td>
             <td>{item.price} €</td>
             <td>{item.quantity}</td>
