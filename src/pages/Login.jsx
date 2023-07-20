@@ -29,7 +29,7 @@ const Login = () => {
             toast.success('Successfully logged in !')
         } catch (error) {
             setLoading(false)
-            toast.error(error)
+            toast.error(`${error.message}`)
         }
     }
     return (

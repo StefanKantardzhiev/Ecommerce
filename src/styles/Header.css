@@ -87,3 +87,13 @@
     border-radius: 100%;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.452);
 }
+
+.logout {
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 26px;
+    font-weight: 700;
+    border: 2px dotted;
+    border-radius: 2rem;
+    margin: auto auto auto 20px;
+}

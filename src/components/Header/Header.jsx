@@ -1,19 +1,12 @@
 import React from 'react'
 import logo from '../../assets/images/PcBuildzLogo.png'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useSelector } from "react-redux"
+import { auth } from '../../firebase.config'
+import { signOut } from 'firebase/auth';
+import { toast } from 'react-toastify'
 
 
-// const navLinks = [
-//     {
-//         path: '/',
-//         display: 'Home'
-//     },
-//     {
-//         path: 'shop',
-//         display: 'Shop'
-//     },
-// ]
 
 const navLinksNewUser = [
     {
@@ -28,7 +21,7 @@ const navLinksNewUser = [
 
 const navLinksLoggedUser = [
     {
-        path: 'profile',
+        path: 'profile/:id',
         display: 'Profile'
     },
     {
@@ -37,13 +30,29 @@ const navLinksLoggedUser = [
     }
 ]
 
+
 const Header = () => {
-    const isLoggedIn = true;
+    const navigate = useNavigate()
+    const user = auth.currentUser
+
+    const sign = (e) => {
+
+        signOut(auth)
+            .then(() => {
+                toast.success('Sign out successful!')
+                navigate('/')
+            })
+            .catch((error) => {
+                toast.error(error)
+            });
+    }
+
 
     // const headerRef = useRef(null)
     const totalQuantity = useSelector(state => state.cart.totalQuantity)
 
     return (
+
         <header className='header'>
             <div className='nav_wrapper'>
                 <div className='logo'>
@@ -54,13 +63,13 @@ const Header = () => {
                     </div>
                 </div>
 
-                {isLoggedIn ?
+                {!user ?
                     <div className="logged">
                         {navLinksNewUser.map((item, index) => (
                             <li className='nav_item' key={index}>
                                 <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
-
                             </li>
+
                         ))}
                     </div> :
                     <div className="logged">
@@ -71,8 +80,8 @@ const Header = () => {
                         ))
                         }
                         <span className='totalQty'>{totalQuantity}</span>
+                        <span className='logout' onClick={sign}>Logout</span>
                     </div>
-
                 }
 
 

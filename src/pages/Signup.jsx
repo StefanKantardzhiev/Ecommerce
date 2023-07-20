@@ -41,38 +41,39 @@ const SignUp = () => {
             const user = userCredential.user
 
             const storageRef = ref(storage, `images/${username.toString().toLocaleLowerCase()}`)
-            if (password === rePass ) {
-                if(email != '' && username != '')
-                uploadBytes(storageRef, file)
-                    .then((snapshot) => {
-                        //update profile
-                        getDownloadURL(snapshot.ref).then(async (downloadUrl) => {
-                            await updateProfile(user, {
-                                displayName: username,
-                                photoURL: downloadUrl,
-                            }).catch((error) => {
-                                toast.error(error)
-                            })
+            if (password === rePass) {
+                if (email != '' && username != '') {
+                    uploadBytes(storageRef, file)
+                        .then((snapshot) => {
+                            //update profile
+                            getDownloadURL(snapshot.ref).then(async (downloadUrl) => {
+                                await updateProfile(user, {
+                                    displayName: username,
+                                    photoURL: downloadUrl,
+                                }).catch((error) => {
+                                    toast.error(error)
+                                })
 
-                            await setDoc(doc(db, "users", user.uid), {
-                                uid: user.uid,
-                                displayName: username,
-                                email,
-                                photoURL: downloadUrl,
-                            }).catch((error) => {
-                                toast.error(error)
-                            })
+                                await setDoc(doc(db, "users", user.uid), {
+                                    uid: user.uid,
+                                    displayName: username,
+                                    email,
+                                    photoURL: downloadUrl,
+                                }).catch((error) => {
+                                    toast.error(error)
+                                })
 
 
+                            });
                         });
-                    });
-                setLoading(false)
-                toast.success('Successfully Registered')
-                navigate('/login')
-            } else {
-                toast.error("Passwords don't match!")
-                setLoading(false)
-                navigate('/signup')
+                    setLoading(false)
+                    toast.success('Successfully Registered')
+                    navigate('/login')
+                } else {
+                    toast.error("Passwords don't match!")
+                    setLoading(false)
+                    navigate('/signup')
+                }
             }
         }
         catch (error) {
@@ -117,8 +118,7 @@ const SignUp = () => {
             </>
             )
             }
-
-        </Helmet >
+        </Helmet>
     )
 }
 
