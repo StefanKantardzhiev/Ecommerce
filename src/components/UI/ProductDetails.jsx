@@ -53,6 +53,10 @@ const ProductDetails = () => {
             text: reviewUserMsg,
             rating
         }
+
+        product.reviews.push(reviewObj)
+
+
         console.log(reviewObj)
         toast.success('Thank you for your time!')
     }
@@ -98,7 +102,7 @@ const ProductDetails = () => {
                 {
                     tab === 'desc' ? <div className="tab_content">
                         <p>{description}</p>
-                    </div> : <div className="reviews_list">{reviews.map(review => <span><i class="ri-user-smile-fill"></i>{review.text}</span>)}</div>
+                    </div> : <div className="reviews_list">{reviews.map(review => <span><i class="ri-user-smile-fill"></i>{review.userName} commented: {review.text}</span>)}</div>
                 }
                 <div className="review_form">
                     <h4>Leave your thoughts</h4>
@@ -114,11 +118,11 @@ const ProductDetails = () => {
                             <a onClick={() => setRating(5)}>5 <i className="ri-star-s-fill"></i></a>
                         </div>
                         <div className="form_group">
-                            <textarea 
-                            rows={5}
-                            placeholder="Review Message" 
-                            ref={reviewMsg}
-                            required />
+                            <textarea
+                                rows={5}
+                                placeholder="Review Message"
+                                ref={reviewMsg}
+                                required />
                         </div>
                         <button type="submit" className="buy_btn">Submit</button>
                     </form>
