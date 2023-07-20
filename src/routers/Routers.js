@@ -9,7 +9,7 @@ import ProductDetails from '../components/UI/ProductDetails'
 import Shop from '../pages/Shop'
 import Signup from '../pages/Signup'
 import Login from '../pages/Login'
-
+import Profile from '../pages/Profile';
 
 import Phones from '../components/Product Pages/Phones';
 import GamingPc from '../components/Product Pages/Gaming';
@@ -28,7 +28,7 @@ const Routers = () => {
         <Route path='checkout' element={<Checkout />} />
         <Route path='signup' element={<Signup />} />
         <Route path='login' element={<Login />} />
-
+        <Route path='users/:id' element={<Profile />} />
 
         <Route path='phones' element={<Phones />} />
         <Route path='laptops' element={<Laptops />} />
