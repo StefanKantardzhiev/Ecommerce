@@ -70,7 +70,7 @@ const ProductDetails = () => {
             <CommonSection title={productName} />
             <section className="product-details">
                 <div className="left-side">
-                    <img src={imgUrl} alt='product-image'></img>
+                    <img src={imgUrl} alt='product-pic'></img>
                 </div>
                 <div className="right-side">
                     <div className="product-info">
@@ -110,11 +110,17 @@ const ProductDetails = () => {
                         <div className="form_group">
                             <input type="text" placeholder="Enter name..." ref={reviewUser} />
                         </div>
+
                         <div className="form_group">
+                            {/* eslint-disable-next-line */}
                             <a onClick={() => setRating(1)}>1 <i className="ri-star-s-fill"></i></a>
+                            {/* eslint-disable-next-line */}
                             <a onClick={() => setRating(2)}>2 <i className="ri-star-s-fill"></i></a>
+                            {/* eslint-disable-next-line */}
                             <a onClick={() => setRating(3)}>3 <i className="ri-star-s-fill"></i></a>
+                            {/* eslint-disable-next-line */}
                             <a onClick={() => setRating(4)}>4 <i className="ri-star-s-fill"></i></a>
+                            {/* eslint-disable-next-line */}
                             <a onClick={() => setRating(5)}>5 <i className="ri-star-s-fill"></i></a>
                         </div>
                         <div className="form_group">
@@ -130,7 +136,7 @@ const ProductDetails = () => {
             </section>
             <section className="related-products">
                 <div className="related-title"><h3>You might also like:</h3></div>
-                <ProductsList data={relatedProducts.filter(item => item.productName != productName)} />
+                <ProductsList data={relatedProducts.filter(item => item.productName !== productName)} />
             </section>
         </Helmet>
     )
