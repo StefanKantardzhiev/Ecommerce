@@ -66,7 +66,7 @@ const Header = () => {
                 {!user ?
                     <div className="logged">
                         {navLinksNewUser.map((item, index) => (
-                            <li className='nav_item' key={index}>
+                            <li className='nav_item' key={(Math.random() * 100).toFixed(0)}>
                                 <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
                             </li>
 
@@ -74,7 +74,7 @@ const Header = () => {
                     </div> :
                     <div className="logged">
                         {navLinksLoggedUser.map((item, index) => (
-                            <li className='nav_item' key={index}>
+                            <li className='nav_item' key={(Math.random(20) * 10).toFixed(0)}>
                                 <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
                             </li>
                         ))

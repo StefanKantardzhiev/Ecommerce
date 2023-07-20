@@ -15,7 +15,7 @@ const Laptops = (item, index) => {
 
 
     return (
-        <ProductsList data={laptops} key={index+12} />
+        <ProductsList data={laptops} key={(Math.random() * 100).toFixed(0)} />
     )
 }
 

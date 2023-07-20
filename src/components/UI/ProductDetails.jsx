@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import { useParams } from "react-router";
 import products from "../../assets/data/products";
@@ -6,7 +6,7 @@ import Helmet from "../Helmet/Helmet";
 import CommonSection from "./CommonSection";
 import { useDispatch } from 'react-redux'
 import { cartActions } from '../../redux/slices/cartSlice'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import ProductsList from "./ProductsList";
 
 
@@ -70,7 +70,7 @@ const ProductDetails = () => {
             <CommonSection title={productName} />
             <section className="product-details">
                 <div className="left-side">
-                    <img src={imgUrl}></img>
+                    <img src={imgUrl} alt='product-image'></img>
                 </div>
                 <div className="right-side">
                     <div className="product-info">

@@ -376,7 +376,7 @@ const products = [
   },
 
   {
-    id: "15",
+    id: "16",
     productName: "Gold Xperia SmartWatch",
     imgUrl: productImg18,
     category: "watch",
@@ -399,7 +399,7 @@ const products = [
   },
 
   {
-    id: "16",
+    id: "17",
     productName: "Handmade Rolex Watch",
     imgUrl: productImg19,
     category: "watch",
@@ -422,7 +422,7 @@ const products = [
   },
 
   {
-    id: "17",
+    id: "18",
     productName: "Timex Easy Reader Watch",
     imgUrl: productImg20,
     category: "watch",
@@ -445,7 +445,7 @@ const products = [
   },
 
   {
-    id: "18",
+    id: "19",
     productName: "Basic Smartwatch",
     imgUrl: productImg21,
     category: "watch",
@@ -468,7 +468,7 @@ const products = [
   },
 
   {
-    id: "19",
+    id: "20",
     productName: "Wireless Headphones BeatBox",
     imgUrl: productImg22,
     category: "wireless",
@@ -491,7 +491,7 @@ const products = [
   },
 
   {
-    id: "20",
+    id: "21",
     productName: "Beat Studio Wireless",
     imgUrl: productImg23,
     category: "wireless",
@@ -513,7 +513,7 @@ const products = [
     avgRating: 4.8,
   },
   {
-    id: "21",
+    id: "22",
     productName: "Intel Core i7 12 Gen RTX 3070Ti",
     imgUrl: productImg24,
     category: "gaming",
@@ -535,7 +535,7 @@ const products = [
     avgRating: 4.8,
   },
   {
-    id: "22",
+    id: "23",
     productName: "Intel Core i5 13 Gen RTX 3080",
     imgUrl: productImg25,
     category: "gaming",
@@ -557,7 +557,7 @@ const products = [
     avgRating: 4.8,
   },
   {
-    id: "23",
+    id: "24",
     productName: "Ryzen 5 3600 RX 6700 XT",
     imgUrl: productImg26,
     category: "gaming",
@@ -579,7 +579,7 @@ const products = [
     avgRating: 4.8,
   },
   {
-    id: "24",
+    id: "25",
     productName: "Ryzen 5 5600X RTX 3090Ti",
     imgUrl: productImg27,
     category: "gaming",
