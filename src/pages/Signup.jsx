@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
-import { ref, uploadBytesResumable, getDownloadURL, uploadBytes } from "firebase/storage";
+import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 import { setDoc, doc } from "firebase/firestore";
 import { auth } from "../firebase.config";
 import { storage } from '../firebase.config'
@@ -42,7 +42,7 @@ const SignUp = () => {
 
             const storageRef = ref(storage, `images/${username.toString().toLocaleLowerCase()}`)
             if (password === rePass) {
-                if (email != '' && username != '') {
+                if (email !== '' && username !== '') {
                     uploadBytes(storageRef, file)
                         .then((snapshot) => {
                             //update profile
