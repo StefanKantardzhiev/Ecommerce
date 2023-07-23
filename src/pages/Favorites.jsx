@@ -1,31 +1,52 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Container, Col, Row } from "reactstrap";
-import { cartActions } from '../redux/slices/cartSlice'
+import { favoriteActions } from '../redux/slices/favoriteSlice'
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../custom-hooks/useAuth'
+import { toast } from "react-toastify";
+import { cartActions } from "../redux/slices/cartSlice";
 
 
-const Cart = () => {
+
+const Favorites = () => {
     const currentUser = useAuth()
-    const cartItems = useSelector(state => state.cart.cartItems)
-    const totalAmount = useSelector(state => state.cart.totalAmount)
+    const favoriteItems = useSelector(state => state.favorite.favoriteItems)
+    const totalAmount = useSelector(state => state.favorite.totalAmount)
 
     const navigate = useNavigate()
+
+    const dispatch = useDispatch()
+
+    const addToCart = () => {
+        favoriteItems.forEach(item => {
+            dispatch(
+                cartActions.addItem({
+                    id: item.id,
+                    productName: item.productName,
+                    price: item.price,
+                    image: item.image
+                }))
+
+            toast.success('Products added to cart!')
+        }
+        );
+        favoriteItems = ['']
+    };
 
     return (
         <Helmet title="Cart">
             {currentUser ? <>
                 <CommonSection title='Shopping Cart' />
-                <section className="shopping-cart">
+                <section className="shopping-favorite">
                     <Container>
                         <Row>
                             <Col lg='12'>
                                 {
 
-                                    cartItems.length === 0
+                                    favoriteItems.length === 0
                                         ?
                                         <h2 className="no-products">No products added!</h2>
                                         :
@@ -40,7 +61,7 @@ const Cart = () => {
                                                 </tr>
                                             </thead>
                                             <tbody className="table-item">
-                                                {cartItems.map((item, index) => (
+                                                {favoriteItems.map((item, index) => (
                                                     <Tr item={item} key={index} />
                                                 ))}
                                             </tbody>
@@ -55,7 +76,7 @@ const Cart = () => {
                                 <p>taxes and shipping wil be added on checkout</p>
                                 <div className="total-buttons">
                                     <button className="buy_btn"><Link to='/shop'>Continue shopping</Link></button>
-                                    <button className="buy_btn"><Link to='/checkout'>Checkout</Link></button>
+                                    <button className="buy_btn" onClick={addToCart}><Link to='/cart'>Add to cart</Link></button>
                                 </div>
                             </div>
                         </Row>
@@ -72,39 +93,22 @@ const Cart = () => {
 
 const Tr = ({ item }) => {
     const dispatch = useDispatch()
-    const cartItems = useSelector(state => state.cart.cartItems)
-    const removeOneItem = (e) => {
-        e.preventDefault()
-        dispatch(cartActions.removeOne(item.id)
-        )
-    }
-    const removeFromCart = (e) => {
-        e.preventDefault()
 
+    const removeFromCart = () => {
         dispatch(
-            cartActions.deleteItem(item.id)
+            favoriteActions.deleteItem(item.id)
         )
-
     }
-
-    const addOneItem = (e) => {
-        e.preventDefault()
-        dispatch(
-            cartActions.addOne(item.id)
-        )
-
-    }
-
     return (
         <tr>
             <td><img src={item.image} alt="item-img"></img></td>
             <td>{item.productName}</td>
             <td>{item.price} €</td>
-            <td min={0} max={9999}><button onClick={removeOneItem}>-</button>{item.quantity}<button onClick={addOneItem}>+</button></td>
+            <td>{item.quantity}</td>
             <td><i className="ri-delete-bin-line" onClick={removeFromCart}></i></td>
         </tr>
 
     )
 }
 
-export default Cart;
+export default Favorites;

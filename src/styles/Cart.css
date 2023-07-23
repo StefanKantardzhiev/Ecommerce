@@ -49,3 +49,14 @@
 .total-buttons a:hover{
     color:white;
 }
+
+span.not-logged{
+    display: block;
+    width: 35%;
+    font-size: 50px;
+    font-weight: 800;
+    border: 10px dotted rgb(255, 0, 0);
+    margin: 30vh auto;
+    text-align: center;
+    padding: 20px;
+}

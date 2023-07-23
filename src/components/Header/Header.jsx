@@ -5,8 +5,8 @@ import { useSelector } from "react-redux"
 import { auth } from '../../firebase.config'
 import { signOut } from 'firebase/auth';
 import { toast } from 'react-toastify'
-
-
+import useAuth from '../../custom-hooks/useAuth'
+import { motion } from 'framer-motion'
 
 const navLinksNewUser = [
     {
@@ -19,21 +19,10 @@ const navLinksNewUser = [
     },
 ]
 
-const navLinksLoggedUser = [
-    {
-        path: 'profile/:id',
-        display: 'Profile'
-    },
-    {
-        path: 'cart',
-        display: 'Cart'
-    }
-]
-
-
 const Header = () => {
     const navigate = useNavigate()
-    const user = auth.currentUser
+    // const user = auth.currentUser
+    const currentUser = useAuth();
 
     const sign = (e) => {
 
@@ -50,9 +39,8 @@ const Header = () => {
 
     // const headerRef = useRef(null)
     const totalQuantity = useSelector(state => state.cart.totalQuantity)
-
+    const totalFavs = useSelector(state => state.favorite.totalQuantity)
     return (
-
         <header className='header'>
             <div className='nav_wrapper'>
                 <div className='logo'>
@@ -63,7 +51,7 @@ const Header = () => {
                     </div>
                 </div>
 
-                {!user ?
+                {currentUser === null ?
                     <div className="logged">
                         {navLinksNewUser.map((item, index) => (
                             <li className='nav_item' key={(Math.random() * 100).toFixed(0)}>
@@ -71,31 +59,18 @@ const Header = () => {
                             </li>
 
                         ))}
-                    </div> :
-                    <div className="logged">
-                        {navLinksLoggedUser.map((item, index) => (
-                            <li className='nav_item' key={(Math.random(20) * 10).toFixed(0)}>
-                                <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
-                            </li>
-                        ))
-                        }
-                        <span className='totalQty'>{totalQuantity}</span>
-                        <span className='logout' onClick={sign}>Logout</span>
-                    </div>
+                    </div> : <>
+                        <div className='logged'>
+                            <li className="favorites-icon"><Link to ='/favorites'><i className='ri-heart-fill' /></Link><span className='totalQty'>{totalFavs}</span></li>
+                            <li className="total-icon"><Link to ='/cart'><i className='ri-shopping-cart-fill' /></Link><span className='totalQty'>{totalQuantity}</span></li>
+                            <li className='profile'><Link to="/profile"><motion.img whileTap={{ scale: 1.2 }} src={currentUser ? currentUser.photoURL : 'Profile'} />{currentUser.displayName}</Link></li>
+                            <li className='logout' onClick={sign}>Logout</li>
+                        </div>
+                    </>
                 }
 
-
-                {/* <div className="logged">
-                    {navLinksLoggedUser.map((item, index) => (
-                        <li className='nav_item' key={index}>
-                            <NavLink to={item.path} className={(navClass) => navClass.isActive ? "nav_active" : ''} >{item.display}</NavLink>
-                        </li>
-                    ))}
-                </div> */}
-
             </div>
-        </header>
-
+        </header >
     )
 }
 

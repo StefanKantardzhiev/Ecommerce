@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import { Container, Row, Col, ListGroupItem, ListGroup } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/PcBuildzLogo.png'

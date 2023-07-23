@@ -1,0 +1,20 @@
+.profile {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+img.profile-img {
+    width: 150px;
+    height: 150px;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h3 {
+    font-weight: 700;
+    font-size: 40px;
+    font-style: italic;
+}
