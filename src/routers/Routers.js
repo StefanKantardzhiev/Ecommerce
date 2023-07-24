@@ -43,14 +43,6 @@ const Routers = () => {
             <ProtectedRoute>
                 <Favorites />
             </ProtectedRoute>} />
-
-        {/* <Route path='phones' element={<Phones />} />
-        <Route path='laptops' element={<Laptops />} />
-        <Route path='gaming' element={<GamingPc />} />
-        <Route path='office' element={<OfficePC />} />
-        <Route path='watches' element={<Watches />} />
-        <Route path='wireless' element={<Wireless />} /> */}
-
     </Routes>
 };
 

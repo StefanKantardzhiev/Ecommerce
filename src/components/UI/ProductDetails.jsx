@@ -19,6 +19,7 @@ const ProductDetails = () => {
     const [rating, setRating] = useState(0)
     const reviewMsg = useRef('')
     const reviewUser = useRef('')
+    const [active, setActive] = useState(false);
 
     const { imgUrl, productName, price, avgRating, reviews, description, shortDesc, category } = product
 
@@ -55,9 +56,8 @@ const ProductDetails = () => {
         }
 
         product.reviews.push(reviewObj)
-
-
         console.log(reviewObj)
+        setActive(!active)
         toast.success('Thank you for your time!')
     }
 
@@ -66,6 +66,7 @@ const ProductDetails = () => {
 
 
     return (
+
         <Helmet title={productName}>
             <CommonSection title={productName} />
             <section className="product-details">
@@ -79,11 +80,11 @@ const ProductDetails = () => {
                     </div>
                     <div className="product-rating">
                         <span>{avgRating} </span>
-                        <i className="ri-star-s-fill" onClick={() => setRating(1)} ></i>
-                        <i className="ri-star-s-fill" onClick={() => setRating(2)}></i>
-                        <i className="ri-star-s-fill" onClick={() => setRating(3)}></i>
-                        <i className="ri-star-s-fill" onClick={() => setRating(4)}></i>
-                        <i className="ri-star-half-s-line" onClick={() => setRating(5)}></i>
+                        <i className="ri-star-s-fill"  ></i>
+                        <i className="ri-star-s-fill" ></i>
+                        <i className="ri-star-s-fill" ></i>
+                        <i className="ri-star-s-fill" ></i>
+                        <i className="ri-star-half-s-line"></i>
                     </div>
                     <span className="product-price">{price.toFixed(2)} €</span>
                     <br />
@@ -111,24 +112,25 @@ const ProductDetails = () => {
                             <input type="text" placeholder="Enter name..." ref={reviewUser} />
                         </div>
 
-                        <div className="form_group">
-                            {/* eslint-disable-next-line */}
-                            <a onClick={() => setRating(1)}>1 <i className="ri-star-s-fill"></i></a>
-                            {/* eslint-disable-next-line */}
-                            <a onClick={() => setRating(2)}>2 <i className="ri-star-s-fill"></i></a>
-                            {/* eslint-disable-next-line */}
-                            <a onClick={() => setRating(3)}>3 <i className="ri-star-s-fill"></i></a>
-                            {/* eslint-disable-next-line */}
-                            <a onClick={() => setRating(4)}>4 <i className="ri-star-s-fill"></i></a>
-                            {/* eslint-disable-next-line */}
-                            <a onClick={() => setRating(5)}>5 <i className="ri-star-s-fill"></i></a>
-                        </div>
+                        
                         <div className="form_group">
                             <textarea
                                 rows={5}
                                 placeholder="Review Message"
                                 ref={reviewMsg}
                                 required />
+                        </div>
+                        <div className="form_group">
+                            {/* eslint-disable-next-line */}
+                            <a onClick={() => setRating(1)} style={{ color: active ? "rgb(98, 107, 202)" : "rgba(0, 0, 0, 0.512)" }}>1 <i className="ri-star-s-fill"></i></a>
+                            {/* eslint-disable-next-line */}
+                            <a onClick={() => setRating(2)} style={{ color: active ? "rgb(98, 107, 202)" : "rgba(0, 0, 0, 0.512)" }}>2 <i className="ri-star-s-fill"></i></a>
+                            {/* eslint-disable-next-line */}
+                            <a onClick={() => setRating(3)} style={{ color: active ? "rgb(98, 107, 202)" : "rgba(0, 0, 0, 0.512)" }}>3 <i className="ri-star-s-fill"></i></a>
+                            {/* eslint-disable-next-line */}
+                            <a onClick={() => setRating(4)} style={{ color: active ? "rgb(98, 107, 202)" : "rgba(0, 0, 0, 0.512)" }}>4 <i className="ri-star-s-fill"></i></a>
+                            {/* eslint-disable-next-line */}
+                            <a onClick={() => setRating(5)} style={{ color: active ? "rgb(98, 107, 202)" : "rgba(0, 0, 0, 0.512)" }}>5 <i className="ri-star-s-fill"></i></a>
                         </div>
                         <button type="submit" className="buy_btn">Submit</button>
                     </form>
