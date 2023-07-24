@@ -52,42 +52,29 @@ const cartSlice = createSlice(
             removeOne: (state, action) => {
                 const id = action.payload
                 const existingItem = state.cartItems.find(item => item.id === id)
+
                 if (existingItem) {
-                    existingItem.quantity = existingItem.quantity - 1
+                   
                     if (existingItem.quantity <= 0) {
-                        existingItem.quantity = 0;
-                    }
-                    if (state.totalAmount <= 0) {
-                        state.totalAmount = 0;
+                        existingItem.totalAmount = 0;
+                        if (state.totalPrice <= 0) {
+                            state.totalPrice = 0;
+                        }
+                        if (state.totalAmount <= 0 && state.totalQuantity <= 0) {
+                            state.totalAmount = 0;
+                            state.totalQuantity = 0;
+                        }
                     } else {
                         state.totalAmount = state.totalAmount - existingItem.price
+                        state.totalQuantity = state.totalQuantity - existingItem.quantity
+                        existingItem.quantity = existingItem.quantity - 1
+                        state.totalPrice = state.cartItems.reduce((total, item) => total + Number(item.price) * Number(item.quantity), 0);
                     }
-                    state.totalQuantity = state.totalQuantity - existingItem.quantity
 
 
 
                 }
-                if (state.totalPrice <= 0) {
-                    state.totalPrice = 0;
-                } else {
-                    state.totalPrice = state.cartItems.reduce((total, item) => total + Number(item.price) * Number(item.quantity), 0);
 
-                }
-            },
-            addOne: (state, action) => {
-                const id = action.payload
-                const existingItem = state.cartItems.find(item => item.id === id)
-                if (existingItem && existingItem.quantity >= 0) {
-                    existingItem.quantity = existingItem.quantity + 1
-                    state.totalQuantity = state.totalQuantity - existingItem.quantity
-                    state.totalAmount = state.totalAmount + existingItem.price
-                }
-                if (state.totalPrice <= 0) {
-                    state.totalPrice = 0;
-                } else {
-                    state.totalPrice = state.cartItems.reduce((total, item) => total + Number(item.price) * Number(item.quantity), 0);
-
-                }
             },
         }
     });

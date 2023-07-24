@@ -6,13 +6,18 @@ import { cartActions } from '../redux/slices/cartSlice'
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../custom-hooks/useAuth'
-
+import { toast } from 'react-toastify'
 
 const Cart = () => {
     const currentUser = useAuth()
     const cartItems = useSelector(state => state.cart.cartItems)
     const totalAmount = useSelector(state => state.cart.totalAmount)
+    const [item, setItem] = useState(cartItems)
 
+
+    // useEffect(() => {
+    //     console.log(items.item.quantity)
+    // }, [item])
     const navigate = useNavigate()
 
     return (
@@ -73,6 +78,8 @@ const Cart = () => {
 const Tr = ({ item }) => {
     const dispatch = useDispatch()
     const cartItems = useSelector(state => state.cart.cartItems)
+
+
     const removeOneItem = (e) => {
         e.preventDefault()
         dispatch(cartActions.removeOne(item.id)
@@ -87,20 +94,22 @@ const Tr = ({ item }) => {
 
     }
 
-    const addOneItem = (e) => {
-        e.preventDefault()
+    const addToCart = () => {
         dispatch(
-            cartActions.addOne(item.id)
-        )
-
+            cartActions.addItem({
+                id: item.id,
+                productName: item.productName,
+                price: item.price,
+                image: item.imgUrl
+            }))
+        toast.success('Product added to cart!')
     }
-
     return (
         <tr>
             <td><img src={item.image} alt="item-img"></img></td>
             <td>{item.productName}</td>
             <td>{item.price} €</td>
-            <td min={0} max={9999}><button onClick={removeOneItem}>-</button>{item.quantity}<button onClick={addOneItem}>+</button></td>
+            <td min={0} max={9999}><button onClick={removeOneItem}>-</button>{item.quantity}<button onClick={addToCart}>+</button></td>
             <td><i className="ri-delete-bin-line" onClick={removeFromCart}></i></td>
         </tr>
 

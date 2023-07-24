@@ -50,8 +50,8 @@ const ProductsCard = ({ item }) => {
             <span className="product_desc">{item.shortDesc}</span>
             <div className="product-card-bottom">
                 <span className="price" >{Number(item.price).toFixed(2)} €</span>
-                <button className='add-icon' onClick={addToFavorites} style={{ color: active ? "rgba(255, 0, 0, 0.507)" : "black" }}><i className="ri-heart-fill"></i></button>
-                <button className='add-icon' onClick={addToCart} style={{ color: active2 ? "rgb(98, 107, 202)" : "black" }}><i className="ri-add-circle-fill"></i></button>
+                <button className='add-icon' onClick={addToFavorites} style={{ color: active ? "rgba(255, 0, 0, 0.507)" : "rgba(0, 0, 0, 0.512)" }}><i className="ri-heart-add-line"></i></button>
+                <button className='add-icon' onClick={addToCart} style={{ color: active2 ? "rgb(98, 107, 202)" : "rgba(0, 0, 0, 0.512)" }}><i className="ri-add-circle-line"></i></button>
             </div>
         </div >
     )

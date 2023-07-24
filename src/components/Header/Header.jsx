@@ -61,8 +61,8 @@ const Header = () => {
                         ))}
                     </div> : <>
                         <div className='logged'>
-                            <li className="favorites-icon"><Link to ='/favorites'><i className='ri-heart-fill' /></Link><span className='totalQty'>{totalFavs}</span></li>
-                            <li className="total-icon"><Link to ='/cart'><i className='ri-shopping-cart-fill' /></Link><span className='totalQty'>{totalQuantity}</span></li>
+                            <li className="favorites-icon"><Link to ='/favorites'><i className='ri-heart-line' /></Link><span className='totalQty'>{totalFavs}</span></li>
+                            <li className="total-icon"><Link to ='/cart'><i className='ri-shopping-cart-line' /></Link><span className='totalQty'>{totalQuantity}</span></li>
                             <li className='profile'><Link to="/profile"><motion.img whileTap={{ scale: 1.2 }} src={currentUser ? currentUser.photoURL : 'Profile'} />{currentUser.displayName}</Link></li>
                             <li className='logout' onClick={sign}>Logout</li>
                         </div>
