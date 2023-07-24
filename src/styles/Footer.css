@@ -21,9 +21,9 @@
 }
 
 .footer {
-    margin-bottom: 0;
+    margin-top: 15%;
+    overflow: visible;
     border-top: 2px solid rgba(0, 0, 0, 0.228);
-    margin-top: 50px;
     padding: 20px;
     background-color: rgba(2, 2, 112, 0.352);
 }

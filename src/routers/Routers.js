@@ -35,8 +35,14 @@ const Routers = () => {
             </ProtectedRoute>} />
         <Route path='signup' element={<Signup />} />
         <Route path='login' element={<Login />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/favorites' element={<Favorites />} />
+        <Route path='/profile' element={
+            <ProtectedRoute>
+                <Profile />
+            </ProtectedRoute>} />
+        <Route path='/favorites' element={
+            <ProtectedRoute>
+                <Favorites />
+            </ProtectedRoute>} />
 
         {/* <Route path='phones' element={<Phones />} />
         <Route path='laptops' element={<Laptops />} />
