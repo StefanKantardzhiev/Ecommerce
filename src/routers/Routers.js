@@ -11,39 +11,30 @@ import Signup from '../pages/Signup'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile';
 
-import Phones from '../components/Product Pages/Phones';
-import GamingPc from '../components/Product Pages/Gaming';
-import OfficePC from '../components/Product Pages/Office';
-import Laptops from '../components/Product Pages/Laptops';
-import Watches from '../components/Product Pages/Watches';
-import Wireless from '../components/Product Pages/Wireless';
+import AllProducts from '../admin/AllProducts';
+import AddProduct from '../admin/AddProduct';
+
 import ProtectedRoute from './ProtectedRoute';
 import Favorites from '../pages/Favorites';
 
 const Routers = () => {
-    return <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='cart' element={
-            <ProtectedRoute>
-                <Cart />
-            </ProtectedRoute>} />
-        <Route path='shop' element={<Shop />} />
-        <Route path='shop/:id' element={<ProductDetails />} />
-        <Route path='checkout' element={
-            <ProtectedRoute>
-                <Checkout />
-            </ProtectedRoute>} />
-        <Route path='signup' element={<Signup />} />
-        <Route path='login' element={<Login />} />
-        <Route path='/profile' element={
-            <ProtectedRoute>
-                <Profile />
-            </ProtectedRoute>} />
-        <Route path='/favorites' element={
-            <ProtectedRoute>
-                <Favorites />
-            </ProtectedRoute>} />
-    </Routes>
+    return (
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='shop' element={<Shop />} />
+            <Route path='shop/:id' element={<ProductDetails />} />
+            <Route path='cart' element={<Cart />} />
+            <Route path='favorites' element={<Favorites />} />
+            <Route path='/*' element={<ProtectedRoute />}>
+                <Route path='profile' element={<Profile />} />
+                <Route path='profile/all-products' element={<AllProducts />} />
+                <Route path='profile/add-product' element={<AddProduct />} />
+                <Route path='checkout' element={<Checkout />} />
+            </Route>
+            <Route path='signup' element={<Signup />} />
+            <Route path='login' element={<Login />} />
+        </Routes>
+    );
 };
 
 export default Routers
