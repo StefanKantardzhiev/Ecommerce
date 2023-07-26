@@ -21,7 +21,7 @@ const ProductsCard = ({ item }) => {
                 id: item.id,
                 productName: item.productName,
                 price: item.price,
-                image: item.imgUrl
+                imgUrl: item.imgUrl
             }))
         setActive2(!active2)
         toast.success('Product added to cart!')
@@ -34,7 +34,7 @@ const ProductsCard = ({ item }) => {
                 id: item.id,
                 productName: item.productName,
                 price: item.price,
-                image: item.imgUrl
+                imgUrl: item.imgUrl
             })
         )
         setActive(!active);

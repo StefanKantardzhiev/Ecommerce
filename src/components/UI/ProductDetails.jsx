@@ -47,16 +47,13 @@ const ProductDetails = () => {
         const reviewUserName = reviewUser.current.value
         const reviewUserMsg = reviewMsg.current.value
 
-        console.log(reviewUserMsg, reviewUserName, rating)
 
         const reviewObj = {
             userName: reviewUserName,
             text: reviewUserMsg,
             rating
         }
-
         product.reviews.push(reviewObj)
-        console.log(reviewObj)
         setActive(!active)
         toast.success('Thank you for your time!')
     }
@@ -112,7 +109,7 @@ const ProductDetails = () => {
                             <input type="text" placeholder="Enter name..." ref={reviewUser} />
                         </div>
 
-                        
+
                         <div className="form_group">
                             <textarea
                                 rows={5}

@@ -14,10 +14,9 @@ import { cartActions } from "../redux/slices/cartSlice";
 const Favorites = () => {
     const currentUser = useAuth()
     const favoriteItems = useSelector(state => state.favorite.favoriteItems)
-    const totalAmount = useSelector(state => state.favorite.totalAmount)
+    const totalAmount = useSelector(state => state.favorite.totalAmount);
 
     const navigate = useNavigate()
-
     const dispatch = useDispatch()
 
     const addToCart = () => {
@@ -27,13 +26,12 @@ const Favorites = () => {
                     id: item.id,
                     productName: item.productName,
                     price: item.price,
-                    image: item.image
+                    imgUrl: item.imgUrl
                 }))
 
             toast.success('Products added to cart!')
         }
         );
-        favoriteItems = ['']
     };
 
     return (
@@ -101,7 +99,7 @@ const Tr = ({ item }) => {
     }
     return (
         <tr>
-            <td><img src={item.image} alt="item-img"></img></td>
+            <td><img src={item.imgUrl} alt="item-img"></img></td>
             <td>{item.productName}</td>
             <td>{item.price} €</td>
             <td>{item.quantity}</td>

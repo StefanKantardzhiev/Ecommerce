@@ -100,13 +100,13 @@ const Tr = ({ item }) => {
                 id: item.id,
                 productName: item.productName,
                 price: item.price,
-                image: item.imgUrl
+                imgUrl: item.imgUrl,
             }))
         toast.success('Product added to cart!')
     }
     return (
         <tr>
-            <td><img src={item.image} alt="item-img"></img></td>
+            <td><img src={item.imgUrl} alt="item-img"></img></td>
             <td>{item.productName}</td>
             <td>{item.price} €</td>
             <td min={0} max={9999}><button onClick={removeOneItem}>-</button>{item.quantity}<button onClick={addToCart}>+</button></td>

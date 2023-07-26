@@ -14,15 +14,13 @@ const favoriteSlice = createSlice({
             const favItem = action.payload
             const existingItem = state.favoriteItems.find(item => item.id === favItem.id)
 
-            console.log(favItem)
-
             state.totalQuantity++
 
             if (!existingItem) {
                 state.favoriteItems.push({
                     id: favItem.id,
                     productName: favItem.productName,
-                    image: favItem.image,
+                    imgUrl: favItem.imgUrl,
                     price: favItem.price,
                     quantity: 1,
                     totalPrice: favItem.price

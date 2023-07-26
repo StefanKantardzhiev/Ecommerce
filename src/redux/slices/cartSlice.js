@@ -25,7 +25,7 @@ const cartSlice = createSlice(
                     state.cartItems.push({
                         id: newItem.id,
                         productName: newItem.productName,
-                        image: newItem.image,
+                        imgUrl: newItem.imgUrl,
                         price: newItem.price,
                         quantity: 1,
                         totalPrice: newItem.price
@@ -54,7 +54,7 @@ const cartSlice = createSlice(
                 const existingItem = state.cartItems.find(item => item.id === id)
 
                 if (existingItem) {
-                   
+
                     if (existingItem.quantity <= 0) {
                         existingItem.totalAmount = 0;
                         if (state.totalPrice <= 0) {

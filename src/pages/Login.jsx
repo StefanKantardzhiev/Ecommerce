@@ -24,7 +24,6 @@ const Login = () => {
         try {
             const userCred = await signInWithEmailAndPassword(auth, email, password)
             const user = userCred.user
-            console.log(user)
             setLoading(false)
             navigate('/cart')
             toast.success('Successfully logged in !')

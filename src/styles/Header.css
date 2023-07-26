@@ -119,7 +119,9 @@
 }
 
 .profile {
+    display: block;
     padding: 1.4rem;
+    margin-bottom: -25rem;
 }
 
 .profile a {
@@ -132,4 +134,15 @@
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 90rem;
+
+}
+
+.favorite-products {
+    display: grid;
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 20% 20% 20%;
+    gap: 2rem;
+    justify-content: center;
+    padding-top: 3rem;
 }
