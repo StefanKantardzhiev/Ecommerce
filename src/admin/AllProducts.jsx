@@ -38,15 +38,15 @@ const AllProducts = () => {
                                                 <th>Delete</th>
                                             </tr>
                                         </thead>
-                                        {productsData.map((item) => {
+                                        {productsData.map((item) => (
                                             <tr>
-                                                <td><img src={item.imgUrl} alt="item-img"></img></td>
-                                                <td>{item.productName}</td>
+                                                <td><img src={item.imgUrl}></img></td>
+                                                <td>{item.title}</td>
                                                 <td>{item.price} €</td>
-                                                <td min={0} max={9999}><button>-</button>{item.quantity}<button >+</button></td>
-                                                <td><i className="ri-delete-bin-line"></i></td>
+                                                {/* <td min={0} max={9999}><button onClick={removeOneItem}>-</button>{item.quantity}<button onClick={addToCart}>+</button></td> */}
+                                                {/* <td><i className="ri-delete-bin-line" onClick={removeFromCart}></i></td> */}
                                             </tr>
-                                        })}
+                                        ))}
 
                                     </table>
                             };
