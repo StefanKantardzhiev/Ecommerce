@@ -1,12 +1,12 @@
 
 import React from 'react'
-import ProductsCard from '../components/UI/ProductsCard'
-import products from '../assets/data/products'
-import { useSelector } from 'react-redux'
+// import ProductsCard from '../components/UI/ProductsCard'
+// import products from '../assets/data/products'
+// import { useSelector } from 'react-redux'
 import Helmet from '../components/Helmet/Helmet'
 import { Row, Col, Container } from 'reactstrap'
-import { Link } from 'react-router-dom'
-import productsData from '../custom-hooks/useGetData'
+// import { Link } from 'react-router-dom'
+// import productsData from '../custom-hooks/useGetData'
 import useGetData from '../custom-hooks/useGetData'
 import CommonSection from '../components/UI/CommonSection'
 

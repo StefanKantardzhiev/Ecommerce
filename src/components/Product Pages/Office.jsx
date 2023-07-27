@@ -3,7 +3,7 @@ import products from '../../assets/data/products'
 import ProductsList from '../../components/UI/ProductsList'
 
 
-const Office = (item, index) => {
+const Office = (index) => {
 
     const [office, setOffice] = useState(products)
 

@@ -23,15 +23,15 @@ const AddProduct = () => {
 
     const addProduct = async (e) => {
         e.preventDefault()
-        const product = {
-            title,
-            shortDesc,
-            description,
-            category,
-            price,
-            productImg,
-            ownerId: user.uid,
-        }
+        // const product = {
+        //     title,
+        //     shortDesc,
+        //     description,
+        //     category,
+        //     price,
+        //     productImg,
+        //     ownerId: user.uid,
+        // }
 
         //add product to firebase
 

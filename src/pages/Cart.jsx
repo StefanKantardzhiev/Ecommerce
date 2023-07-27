@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Container, Col, Row } from "reactstrap";
@@ -12,7 +12,7 @@ const Cart = () => {
     const currentUser = useAuth()
     const cartItems = useSelector(state => state.cart.cartItems)
     const totalAmount = useSelector(state => state.cart.totalAmount)
-    const [item, setItem] = useState(cartItems)
+    // const [item, setItem] = useState(cartItems)
 
 
     // useEffect(() => {
@@ -69,8 +69,7 @@ const Cart = () => {
             </> :
                 <span className="not-logged">You have to login in order to see this content</span>
             }
-
-        </Helmet >
+        </Helmet>
     )
 }
 
