@@ -1,0 +1,18 @@
+.add-product-textarea {
+    display: block;
+    width: 60%;
+    margin: 15px auto;
+    height: 200px;
+}
+
+.form-group {
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+
+.add-product-image {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}

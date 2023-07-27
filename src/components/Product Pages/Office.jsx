@@ -3,7 +3,7 @@ import products from '../../assets/data/products'
 import ProductsList from '../../components/UI/ProductsList'
 
 
-const OfficePC = (item, index) => {
+const Office = (item, index) => {
 
     const [office, setOffice] = useState(products)
 
@@ -20,4 +20,4 @@ const OfficePC = (item, index) => {
     )
 }
 
-export default OfficePC
+export default Office

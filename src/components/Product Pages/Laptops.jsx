@@ -1,22 +1,22 @@
-// import React, { useEffect, useState } from 'react'
-// import { ListGroup } from 'reactstrap'
-// import products from '../../assets/data/products'
-// import ProductsList from '../UI/ProductsList'
+import React, { useEffect, useState } from 'react'
+import { ListGroup } from 'reactstrap'
+import products from '../../assets/data/products'
+import ProductsList from '../UI/ProductsList'
 
 
-// const Laptops = (item, index) => {
-//     const [laptops, setLaptops] = useState(products)
+const Laptops = (item, index) => {
+    const [laptops, setLaptops] = useState(products)
 
-//     const laptopsList = products.filter(item => item.category === "laptop")
+    const laptopsList = products.filter(item => item.category === "laptop")
 
-//     useEffect(() => {
-//         setLaptops(laptopsList)
-//     }, [])
+    useEffect(() => {
+        setLaptops(laptopsList)
+    }, [])
 
 
-//     return (
-//         <ProductsList data={laptops} key={(Math.random() * 100).toFixed(0)} />
-//     )
-// }
+    return (
+        <ProductsList data={laptops} key={(Math.random() * 100).toFixed(0)} />
+    )
+}
 
-// export default Laptops
+export default Laptops
