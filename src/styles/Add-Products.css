@@ -5,6 +5,65 @@
     height: 200px;
 }
 
+
+.add-product {
+    border-radius: 2rem;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    margin-top: 4vh;
+    padding-bottom: 5%;
+    box-shadow: inset 1px 1px 10px black;
+    margin-bottom: -20rem;
+}
+
+.add-product-container {
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.add-product-title {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.add-product-form form {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto
+}
+
+.add-product-form input {
+    display: block;
+    width: 60%;
+    padding: .8rem;
+    margin: 20px auto;
+    border-radius: 2rem;
+    border: 1.5px solid black;
+}
+
+.add-product-form button {
+    scale: 1.2;
+    display: block;
+    width: 40%;
+    margin: 4rem auto;
+}
+
+.add-product-container p {
+    text-align: center;
+}
+
+.add-product-container p a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 .form-group {
     display: block;
     width: 40%;

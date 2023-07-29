@@ -17,3 +17,36 @@ img.profile-img {
     font-size: 40px;
     font-style: italic;
 }
+
+.owner-items {
+    margin-bottom: -15rem;
+}
+
+
+.profile-addProduct {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    /* align-items: center; */
+    justify-content: center;
+    color: black;
+    border: 3px dotted;
+    border-radius: 2rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.profile-addProduct i {
+    padding: 0 10px;
+    font-size: 30px;
+}
+
+.profile-addProduct:hover {
+    scale: 1.1;
+}

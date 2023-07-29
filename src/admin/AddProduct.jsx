@@ -18,7 +18,6 @@ const AddProduct = () => {
     const navigate = useNavigate()
     const user = useAuth()
 
-    console.log(user)
 
 
     const addProduct = async (e) => {
@@ -36,9 +35,8 @@ const AddProduct = () => {
         //add product to firebase
 
         try {
-            const docRef = await collection(db, 'products')
-            const storageRef = ref(storage, `productImages/${(Date.now() * 100).toFixed(0)}`);
-            // const uploadTask = uploadBytes(storageRef, productImg)
+            const docRef = collection(db, 'products')
+            const storageRef = ref(storage, `images/${(Date.now() * 100).toFixed(0)}`);
 
             uploadBytes(storageRef, productImg)
                 .then((snapshot) => {
@@ -58,19 +56,19 @@ const AddProduct = () => {
             toast.error(error.toString())
         }
         toast.dark('Product successfully added !')
-        navigate('/profile/all-products')
+        navigate('/profile')
     }
 
 
     return (
         <Helmet title="Add Product">
             <CommonSection title="Add Product" />
-            <section className="login">
-                <div className="login-container">
-                    <h3 className="login-title">
+            <section className="add-product">
+                <div className="add-product-container">
+                    <h3 className="add-product-title">
                         Add Product
                     </h3>
-                    <form className="login-form" required>
+                    <form className="add-product-form" required>
                         <input
                             type="text"
                             placeholder="Product title..."
@@ -113,7 +111,7 @@ const AddProduct = () => {
                             onChange={e => setDescription(e.target.value)}>
                         </textarea>
                         <span className='add-product-image'>Product Image</span>
-                        <input type="file" placeholder='Upload .png/.jpg' required onChange={e => setProductImg(e.target.value)}></input>
+                        <input type="file" placeholder='Upload .png/.jpg' required onChange={(e) => setProductImg(e.target.files[0])} />
                         <button
                             type="submit"
                             className="buy_btn" onClick={addProduct}>Add</button>

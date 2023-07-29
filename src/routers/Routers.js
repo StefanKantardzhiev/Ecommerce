@@ -22,7 +22,7 @@ import Phones from '../components/Product Pages/Phones'
 
 
 
-import AllProducts from '../admin/AllProducts';
+import AllProducts from '../admin/YourProducts';
 import AddProduct from '../admin/AddProduct';
 
 import ProtectedRoute from './ProtectedRoute';

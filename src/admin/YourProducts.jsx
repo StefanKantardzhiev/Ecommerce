@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useContext, useState } from 'react'
 // import ProductsCard from '../components/UI/ProductsCard'
 // import products from '../assets/data/products'
 // import { useSelector } from 'react-redux'
@@ -9,12 +9,21 @@ import { Row, Col, Container } from 'reactstrap'
 // import productsData from '../custom-hooks/useGetData'
 import useGetData from '../custom-hooks/useGetData'
 import CommonSection from '../components/UI/CommonSection'
+import { Link } from 'react-router-dom'
+import { productActions } from '../redux/slices/productSlice'
+import { useDispatch } from 'react-redux'
 
-
-
-const AllProducts = () => {
+const YourProducts = () => {
     const { data: productsData } = useGetData('products')
+    const dispatch = useDispatch()
+    console.log([{productsData}])
 
+    const removeItem = (e) => {
+        e.preventDefault()
+        dispatch(
+            productActions.map((eachItem) => productActions.deleteItem(eachItem.id))
+        )
+    }
 
     return (
         <Helmet title='Your Products'>
@@ -38,24 +47,25 @@ const AllProducts = () => {
                                                 <th>Delete</th>
                                             </tr>
                                         </thead>
-                                        {productsData.map((item) => (
-                                            <tr>
-                                                <td><img src={item.imgUrl}></img></td>
-                                                <td>{item.title}</td>
-                                                <td>{item.price} €</td>
-                                                {/* <td min={0} max={9999}><button onClick={removeOneItem}>-</button>{item.quantity}<button onClick={addToCart}>+</button></td> */}
-                                                {/* <td><i className="ri-delete-bin-line" onClick={removeFromCart}></i></td> */}
-                                            </tr>
+                                        {productsData.map(item => (
+                                            <tfoot key={item.id}>
+                                                <tr>
+                                                    <td><img src={item.imgUrl} width={80} alt='product-img' /></td>
+                                                    <td>{item.title}</td>
+                                                    <td>{item.price} €</td>
+                                                    <td><i className="ri-delete-bin-line" onClick={removeItem}></i></td>
+                                                </tr>
+                                            </tfoot>
                                         ))}
-
                                     </table>
-                            };
+                            }
+                            <Link to='/profile/add-product'><span className="profile-addProduct"><i class="ri-add-line" /><span>Add New products</span><i class="ri-add-line" /></span></Link>
                         </Col>
                     </Row>
                 </Container>
-            </section>
-        </Helmet>
+            </section >
+        </Helmet >
     )
 }
 
-export default AllProducts
+export default YourProducts

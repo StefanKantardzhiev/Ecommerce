@@ -3,7 +3,7 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Container, Col, Row } from "reactstrap";
 import { cartActions } from '../redux/slices/cartSlice'
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from '../custom-hooks/useAuth'
 import { toast } from 'react-toastify'
