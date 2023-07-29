@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, ListGroupItem, ListGroup } from 'reactstrap'
 import { Link } from 'react-router-dom'
- import React from 'react'
 
 const Footer = () => {
   const date = new Date()
