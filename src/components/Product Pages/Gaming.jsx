@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from 'react'
-// import { ListGroup } from 'reactstrap'
-import products from '../../assets/data/products'
-import ProductsList from '../../components/UI/ProductsList'
+import React, { useEffect, useState } from 'react';
+import { api } from '../../services/rest-service';
+import ProductsList from '../../components/UI/ProductsList';
 
-const Gaming = (item) => {
-    const [gaming, setGaming] = useState(products)
-    const gamingList = products.filter(item => item.category === "gaming")
+const Gaming = () => {
+    const [gaming, setGaming] = useState([]);
 
     useEffect(() => {
-        setGaming(gamingList)
-    }, [])
+        const fetchProducts = async () => {
+            let response = await api.get('/products/catalog');
+            let products = response;
+            let gamingList = products.filter(item => item.category === "gaming");
+            setGaming(gamingList);
+        };
 
+        fetchProducts();
+    }, []);
 
     return (
         <ProductsList data={gaming} />
-    )
-}
+    );
+};
 
-export default Gaming
+export default Gaming;

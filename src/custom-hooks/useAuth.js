@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '../firebase.config'
 import { useEffect } from 'react'
 
 
@@ -11,14 +9,9 @@ export const useAuth = () => {
 
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setCurrentUser(user)
-            } else {
-                setCurrentUser(null)
-            }
-        })
-    })
+        const user = localStorage.getItem('user')
+        setCurrentUser(user)
+    }, [])  
 
 
     return currentUser

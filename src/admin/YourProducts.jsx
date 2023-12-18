@@ -7,24 +7,17 @@ import Helmet from '../components/Helmet/Helmet'
 import { Row, Col, Container } from 'reactstrap'
 // import { Link } from 'react-router-dom'
 // import productsData from '../custom-hooks/useGetData'
-import useGetData from '../custom-hooks/useGetData'
 import CommonSection from '../components/UI/CommonSection'
 import { Link } from 'react-router-dom'
-import { productActions } from '../redux/slices/productSlice'
-import { useDispatch } from 'react-redux'
-import { doc, deleteDoc } from 'firebase/firestore'
-import { db } from '../firebase.config'
-import { useNavigate } from 'react-router-dom'
-
+import { api } from '../services/rest-service'
 const YourProducts = () => {
-    const { data: productsData, loading } = useGetData('products');
+    const productsData = api.get('/products/catalog')
     const [isDeleting, setIsDeleting] = useState(false);
-
+    
     
 
     const removeItem = async (id) => {
-        await deleteDoc(doc(db, 'products', id));
-        setIsDeleting(true);
+       
     };
 
     useEffect(() => {
@@ -59,10 +52,7 @@ const YourProducts = () => {
                                             </tr>
                                         </thead>
                                         {
-                                            loading ? (
-                                                <h4 className='py-5 text-center fw-bold'>Loading...</h4>)
-                                                :
-                                                (
+
                                                     productsData.map(item => (
                                                         <tfoot key={item.id}>
                                                             <tr>
@@ -73,7 +63,6 @@ const YourProducts = () => {
                                                             </tr>
                                                         </tfoot>
                                                     ))
-                                                )
                                        /* {productsData.map(item => (
                                                     <tfoot key={item.id}>
                                                         <tr>

@@ -2,9 +2,6 @@ import React, { useState } from 'react'
 import Helmet from '../components/Helmet/Helmet'
 import CommonSection from '../components/UI/CommonSection'
 import { toast } from 'react-toastify'
-import { db, storage } from '../firebase.config'
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import { collection, addDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router'
 import { useAuth } from '../custom-hooks/useAuth'
 
@@ -35,23 +32,7 @@ const AddProduct = () => {
         //add product to firebase
 
         try {
-            const docRef = collection(db, 'products')
-            const storageRef = ref(storage, `images/${(Date.now() * 100).toFixed(0)}`);
-
-            uploadBytes(storageRef, productImg)
-                .then((snapshot) => {
-                    getDownloadURL(snapshot.ref).then(async (downloadUrl) => {
-                        await addDoc(docRef, {
-                            title,
-                            shortDesc,
-                            description,
-                            category,
-                            price,
-                            ownerId: user.uid,
-                            imgUrl: downloadUrl,
-                        })
-                    })
-                });
+            console.log("addProduct")
         } catch (error) {
             toast.error(error.toString())
         }

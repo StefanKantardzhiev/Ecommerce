@@ -3,12 +3,10 @@ import React from "react";
 // import CommonSection from "../components/UI/CommonSection";
 // import { Link } from "react-router-dom";
 import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from "react-toastify";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import { Link, useNavigate } from "react-router-dom";
-import { auth } from "../firebase.config";
 
 
 const Login = () => {
@@ -19,18 +17,18 @@ const Login = () => {
     const navigate = useNavigate()
 
     const signin = async (e) => {
-        e.preventDefault()
-        setLoading(true)
-        try {
-            const userCred = await signInWithEmailAndPassword(auth, email, password)
-            const user = userCred.user
-            setLoading(false)
-            navigate('/cart')
-            toast.success('Successfully logged in !')
-        } catch (error) {
-            setLoading(false)
-            toast.error(`${error.message}`)
-        }
+        // e.preventDefault()
+        // setLoading(true)
+        // try {
+        //     const userCred = await signInWithEmailAndPassword(auth, email, password)
+        //     const user = userCred.user
+        //     setLoading(false)
+        //     navigate('/cart')
+        //     toast.success('Successfully logged in !')
+        // } catch (error) {
+        //     setLoading(false)
+        //     toast.error(`${error.message}`)
+        // }
     }
     return (
         <Helmet title="Login">

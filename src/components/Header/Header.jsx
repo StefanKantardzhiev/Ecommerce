@@ -2,8 +2,6 @@ import React from 'react'
 import logo from '../../assets/images/PcBuildzLogo.png'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useSelector } from "react-redux"
-import { auth } from '../../firebase.config'
-import { signOut } from 'firebase/auth';
 import { toast } from 'react-toastify'
 import useAuth from '../../custom-hooks/useAuth'
 import { motion } from 'framer-motion'
@@ -26,14 +24,14 @@ const Header = () => {
 
     const sign = (e) => {
 
-        signOut(auth)
-            .then(() => {
-                toast.success('Sign out successful!')
-                navigate('/')
-            })
-            .catch((error) => {
-                toast.error(error)
-            });
+        // signOut(auth)
+            // .then(() => {
+            //     toast.success('Sign out successful!')
+            //     navigate('/')
+            // })
+            // .catch((error) => {
+            //     toast.error(error)
+            // });
     }
 
 
